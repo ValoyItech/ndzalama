@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Distinguished Wines | Under Maintenance</title>
+  <meta name="description" content="Distinguished Wines by Mr Amazing — Crafting timeless elegance in every bottle. Our website is currently under maintenance, please check back soon.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Primary Meta Tags -->
+  <meta property="og:title" content="Distinguished Wines | Under Maintenance">
+  <meta property="og:description" content="Distinguished Wines by Mr Amazing — Crafting timeless elegance in every bottle. Our website is currently under maintenance, please check back soon.">
+  <meta property="og:image" content="https://distinguishedd.co.za/WhatsApp%20Image%202025-10-14%20at%2007.34.48_830da914.jpg">
+  <meta property="og:url" content="https://distinguishedd.co.za">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Distinguished Wines | Under Maintenance">
+  <meta name="twitter:description" content="Distinguished Wines by Mr Amazing — Crafting timeless elegance in every bottle.">
+  <meta name="twitter:image" content="https://distinguishedd.co.za/WhatsApp%20Image%202025-10-14%20at%2007.34.48_830da914.jpg">
+
+<!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="WhatsApp Image 2025-10-14 at 07.34.48_830da914.jpg">
+
+  <!-- Local preview image (for WhatsApp desktop, older crawlers, etc.) -->
+  <link rel="image_src" href="WhatsApp Image 2025-10-14 at 07.34.48_830da914.jpg">
+
+  <style>
+    html,body{
+      height:100%;
+      margin:0;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background:#000;
+      color:#c8a15a;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    canvas{
+      position:fixed;
+      inset:0;
+      z-index:0;
+      display:block;
+    }
+    .content{
+      position:relative;
+      z-index:1;
+      text-align:center;
+      max-width:650px;
+      padding:30px;
+      backdrop-filter: blur(6px);
+      animation: fadeIn 2s ease-in-out;
+    }
+    img{
+      width:250px;
+      height:auto;
+      margin-bottom:15px;
+    }
+    h1{
+      font-size:2rem;
+      margin:15px 0 10px;
+      letter-spacing:1px;
+      color:#d4af37;
+    }
+    p{
+      color:rgba(200,161,90,0.9);
+      font-size:1.1rem;
+      line-height:1.6;
+    }
+    .loader{
+      width:50px;
+      height:50px;
+      border:4px solid rgba(200,161,90,0.2);
+      border-top-color:#c8a15a;
+      border-radius:50%;
+      margin:25px auto;
+      animation: spin 1.2s linear infinite;
+    }
+    .info{
+      margin-top:15px;
+      font-size:0.95rem;
+      letter-spacing:0.5px;
+      color:#c8a15a;
+    }
+    a{
+      color:#c8a15a;
+      text-decoration:none;
+    }
+    @keyframes spin{
+      to{transform: rotate(360deg);}
+    }
+    @keyframes fadeIn{
+      from{opacity:0; transform:translateY(10px);}
+      to{opacity:1; transform:translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+
+<div class="content">
+  <img src="WhatsApp Image 2025-10-14 at 07.34.48_830da914.jpg" alt="Distinguished Wines Logo">
+  <div class="loader"></div>
+  <h1>Website Under Maintenance</h1>
+  <p>We’re refining your experience to match the distinguished taste of our wines.<br>
+  Please check back soon — excellence is worth the wait.</p>
+  
+  <div class="info">
+    <p><strong>Distinguished by Mr Amazing</strong><br>
+    <a href="tel:+27659795627">+27 65 979 5627</a> | 
+    <a href="https://www.instagram.com/mramazing_the_stylist" target="_blank">@mramazing_the_stylist</a></p>
+  </div>
+</div>
+
+<script>
+  // Elegant golden particle animation
+  const c = document.getElementById('bg');
+  const ctx = c.getContext('2d');
+  let w, h, particles;
+
+  function resize(){
+    w = c.width = innerWidth;
+    h = c.height = innerHeight;
+    particles = Array.from({length: Math.floor((w+h)/40)}, () => ({
+      x: Math.random()*w,
+      y: Math.random()*h,
+      r: Math.random()*2+1,
+      dx: Math.random()*0.6-0.3,
+      dy: Math.random()*0.6-0.3,
+    }));
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  function draw(){
+    ctx.clearRect(0,0,w,h);
+    ctx.fillStyle='rgba(200,161,90,0.3)';
+    for(const p of particles){
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fill();
+      p.x+=p.dx; p.y+=p.dy;
+      if(p.x<0||p.x>w) p.dx*=-1;
+      if(p.y<0||p.y>h) p.dy*=-1;
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+</script>
+
+</body>
+</html>
