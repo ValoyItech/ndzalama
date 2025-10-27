@@ -1,155 +1,1635 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Distinguished Wines | Under Maintenance</title>
-  <meta name="description" content="Distinguished Wines by Mr Amazing — Crafting timeless elegance in every bottle. Our website is currently under maintenance, please check back soon.">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Distinguished by Mr Amazing - Premium Wines &amp; Luxury Fashion</title>
+  <!-- Essential Meta Tags -->
 
-  <!-- Primary Meta Tags -->
-  <meta property="og:title" content="Distinguished Wines | Under Maintenance">
-  <meta property="og:description" content="Distinguished Wines by Mr Amazing — Crafting timeless elegance in every bottle. Our website is currently under maintenance, please check back soon.">
-  <meta property="og:image" content="https://distinguishedd.co.za/WhatsApp%20Image%202025-10-14%20at%2007.34.48_830da914.jpg">
-  <meta property="og:url" content="https://distinguishedd.co.za">
-  <meta property="og:type" content="website">
+<meta name="description" content="Distinguished by Mr Amazing — a visionary collection of premium wines, luxury fashion, corporate uniforms, training, and transport services. Led by Ishmael Ndzalama Baloyi, redefining excellence in South Africa.">
+<meta name="keywords" content="Distinguished by Mr Amazing, Mr Amazing, Ishmael Ndzalama Baloyi, luxury fashion, premium wines, South Africa fashion, bespoke uniforms, corporate wear, Mr A, distinguished holdings, wine collection, fashion stylist, luxury lifestyle">
+<meta name="author" content="Distinguished Holdings">
+<meta name="robots" content="index, follow">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Distinguished Wines | Under Maintenance">
-  <meta name="twitter:description" content="Distinguished Wines by Mr Amazing — Crafting timeless elegance in every bottle.">
-  <meta name="twitter:image" content="https://distinguishedd.co.za/WhatsApp%20Image%202025-10-14%20at%2007.34.48_830da914.jpg">
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="Distinguished by Mr Amazing – Premium Wines & Luxury Fashion">
+<meta property="og:description" content="Luxury, excellence, and sophistication — from fashion and wines to corporate uniforms and transport services.">
+<meta property="og:image" content="https://www.distinguishedd.co.za/images/preview.jpg"> <!-- Replace with your actual image URL -->
+<meta property="og:url" content="https://www.distinguishedd.co.za/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Distinguished by Mr Amazing">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Distinguished by Mr Amazing – Premium Wines & Luxury Fashion">
+<meta name="twitter:description" content="Luxury, excellence, and sophistication — from fashion and wines to corporate uniforms and transport services.">
+<meta name="twitter:image" content="https://www.distinguishedd.co.za/images/preview.jpg"> <!-- Replace with your actual image URL -->
 
 <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="WhatsApp Image 2025-10-14 at 07.34.48_830da914.jpg">
+<link rel="icon" type="image/png" href="images/logo.png">
 
-  <!-- Local preview image (for WhatsApp desktop, older crawlers, etc.) -->
-  <link rel="image_src" href="WhatsApp Image 2025-10-14 at 07.34.48_830da914.jpg">
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <style>
-    html,body{
-      height:100%;
-      margin:0;
-      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background:#000;
-      color:#c8a15a;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      overflow:hidden;
-    }
-    canvas{
-      position:fixed;
-      inset:0;
-      z-index:0;
-      display:block;
-    }
-    .content{
-      position:relative;
-      z-index:1;
-      text-align:center;
-      max-width:650px;
-      padding:30px;
-      backdrop-filter: blur(6px);
-      animation: fadeIn 2s ease-in-out;
-    }
-    img{
-      width:250px;
-      height:auto;
-      margin-bottom:15px;
-    }
-    h1{
-      font-size:2rem;
-      margin:15px 0 10px;
-      letter-spacing:1px;
-      color:#d4af37;
-    }
-    p{
-      color:rgba(200,161,90,0.9);
-      font-size:1.1rem;
-      line-height:1.6;
-    }
-    .loader{
-      width:50px;
-      height:50px;
-      border:4px solid rgba(200,161,90,0.2);
-      border-top-color:#c8a15a;
-      border-radius:50%;
-      margin:25px auto;
-      animation: spin 1.2s linear infinite;
-    }
-    .info{
-      margin-top:15px;
-      font-size:0.95rem;
-      letter-spacing:0.5px;
-      color:#c8a15a;
-    }
-    a{
-      color:#c8a15a;
-      text-decoration:none;
-    }
-    @keyframes spin{
-      to{transform: rotate(360deg);}
-    }
-    @keyframes fadeIn{
-      from{opacity:0; transform:translateY(10px);}
-      to{opacity:1; transform:translateY(0);}
-    }
-  </style>
-</head>
-<body>
+        body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<canvas id="bg"></canvas>
+        html, body {
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000;
+            color: #c8a15a;
+            scroll-behavior: smooth;
+        }
 
-<div class="content">
-  <img src="page.png" alt="Distinguished Wines Logo">
-  <div class="loader"></div>
-  <h1>Website Under Maintenance</h1>
-  <p>We’re refining your experience to match the distinguished taste of our wines.<br>
-  Please check back soon — excellence is worth the wait.</p>
-  
-  <div class="info">
-    <p><strong>Distinguished by Mr Amazing</strong><br>
-    <a href="tel:+27659795627">+27 65 979 5627</a> | 
-    <a href="https://www.instagram.com/mramazing_the_stylist" target="_blank">@mramazing_the_stylist</a></p>
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo-nav {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #d4af37;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #c8a15a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #d4af37;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #d4af37;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            transition: right 0.3s ease;
+            padding: 80px 20px 20px;
+        }
+
+        .sidebar.active {
+            right: 0;
+        }
+
+        .sidebar-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #d4af37;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .sidebar-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar-links li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar-links a {
+            color: #c8a15a;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar-links a:hover {
+            color: #d4af37;
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1500;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hero Section with Slider */
+        .hero-section {
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide-1 {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/herowine.png');
+        }
+
+        .slide-2 {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/herofash.png');
+        }
+
+        .slide-3 {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/herosew.png');
+        }
+
+        .slide-4 {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/herocars.png');
+        }
+
+        .slide-5 {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/herouni.png');
+        }
+
+        .slide-content {
+            text-align: center;
+            max-width: 900px;
+            padding: 0 20px;
+            animation: slideInUp 1s ease-out;
+        }
+
+        .slide-category {
+            font-size: 1.2rem;
+            color: #d4af37;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .slide-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #d4af37;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .slide-subtitle {
+            font-size: 1.3rem;
+            color: #c8a15a;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .slide-description {
+            font-size: 1.1rem;
+            color: rgba(200, 161, 90, 0.9);
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .slide-cta {
+            display: inline-block;
+            padding: 15px 30px;
+            background: rgba(212, 175, 55, 0.2);
+            border: 2px solid #d4af37;
+            color: #d4af37;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .slide-cta:hover {
+            background: #d4af37;
+            color: #000;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #d4af37;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: #c8a15a;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .cta-btn {
+            padding: 15px 30px;
+            background: rgba(212, 175, 55, 0.2);
+            border: 2px solid #d4af37;
+            color: #d4af37;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .cta-btn:hover {
+            background: #d4af37;
+            color: #000;
+        }
+
+        .slider-nav {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 3;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(200, 161, 90, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slider-dot.active {
+            background: #d4af37;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #000 50%, #1a1a1a 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text {
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        .about-title {
+            font-size: 3rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .founder-name {
+            font-size: 1.5rem;
+            color: #c8a15a;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .founder-subtitle {
+            font-size: 1.2rem;
+            color: #d4af37;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .about-description {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: rgba(200, 161, 90, 0.9);
+            margin-bottom: 30px;
+        }
+
+        .about-image {
+            text-align: center;
+            animation: fadeInRight 1s ease-out;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #d4af37;
+        }
+
+        /* Brands Section */
+        .brands-section {
+            padding: 100px 0;
+            background: #000;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            color: #d4af37;
+            margin-bottom: 60px;
+            font-weight: bold;
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .brand-card {
+            background: rgba(200, 161, 90, 0.1);
+            border: 2px solid rgba(200, 161, 90, 0.3);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .brand-card:hover {
+            border-color: #d4af37;
+            background: rgba(200, 161, 90, 0.15);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(212, 175, 55, 0.3);
+        }
+
+        .brand-card:hover .brand-image {
+            transform: scale(1.05);
+        }
+
+        .brand-image {
+            transition: transform 0.3s ease;
+        }
+
+        .brand-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .brand-title {
+            font-size: 2rem;
+            color: #d4af37;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .brand-description {
+            color: rgba(200, 161, 90, 0.9);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .brand-btn {
+            padding: 12px 25px;
+            background: transparent;
+            border: 2px solid #d4af37;
+            color: #d4af37;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .brand-btn:hover {
+            background: #d4af37;
+            color: #000;
+        }
+
+        /* Corporate Uniforms Section */
+        .uniforms-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+        }
+
+        .uniforms-intro {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .uniforms-description {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: rgba(200, 161, 90, 0.9);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .uniforms-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            margin-bottom: 80px;
+        }
+
+        .subsection-title {
+            font-size: 2.2rem;
+            color: #d4af37;
+            margin-bottom: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .expertise-grid {
+            display: grid;
+            gap: 30px;
+        }
+
+        .expertise-item {
+            background: rgba(200, 161, 90, 0.1);
+            border: 2px solid rgba(200, 161, 90, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .expertise-item:hover {
+            border-color: #d4af37;
+            background: rgba(200, 161, 90, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .expertise-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .expertise-title {
+            font-size: 1.5rem;
+            color: #d4af37;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .expertise-desc {
+            color: rgba(200, 161, 90, 0.9);
+            line-height: 1.6;
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .industry-item {
+            background: rgba(200, 161, 90, 0.1);
+            border: 2px solid rgba(200, 161, 90, 0.2);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .industry-item:hover {
+            border-color: #d4af37;
+            background: rgba(200, 161, 90, 0.15);
+            transform: scale(1.05);
+        }
+
+        .industry-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .industry-name {
+            font-size: 1.2rem;
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        .why-choose-section {
+            margin-bottom: 80px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .benefit-item {
+            background: rgba(200, 161, 90, 0.1);
+            border: 2px solid rgba(200, 161, 90, 0.2);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            border-color: #d4af37;
+            background: rgba(200, 161, 90, 0.15);
+            transform: translateY(-10px);
+        }
+
+        .benefit-icon {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .benefit-title {
+            font-size: 1.6rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .benefit-desc {
+            color: rgba(200, 161, 90, 0.9);
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .promise-section {
+            text-align: center;
+        }
+
+        .promise-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: rgba(200, 161, 90, 0.9);
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-section {
+            margin-top: 40px;
+        }
+
+        .uniforms-cta {
+            display: inline-block;
+            padding: 20px 40px;
+            background: #d4af37;
+            color: #000;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+        }
+
+        .uniforms-cta:hover {
+            background: #c8a15a;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .cta-subtitle {
+            color: rgba(200, 161, 90, 0.8);
+            font-size: 1.1rem;
+            margin-top: 15px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #000 50%, #1a1a1a 100%);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info {
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        .contact-title {
+            font-size: 3rem;
+            color: #d4af37;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .contact-details {
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #d4af37;
+        }
+
+        .contact-link {
+            color: #c8a15a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: #d4af37;
+        }
+
+        .contact-form {
+            background: rgba(200, 161, 90, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid rgba(200, 161, 90, 0.3);
+            animation: fadeInRight 1s ease-out;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(200, 161, 90, 0.3);
+            border-radius: 5px;
+            color: #c8a15a;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+
+        .form-textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: #d4af37;
+            border: none;
+            border-radius: 5px;
+            color: #000;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #c8a15a;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #1a1a1a 0%, #000 50%, #1a1a1a 100%);
+            padding: 60px 0 20px;
+            border-top: 1px solid rgba(200, 161, 90, 0.3);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: #d4af37;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(200, 161, 90, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #d4af37;
+        }
+
+        .footer-contact p {
+            color: rgba(200, 161, 90, 0.8);
+            margin-bottom: 10px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(212, 175, 55, 0.2);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
+            color: #d4af37;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: #d4af37;
+            color: #000;
+            border-color: #d4af37;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(200, 161, 90, 0.2);
+        }
+
+        .footer-text {
+            color: rgba(200, 161, 90, 0.7);
+            font-size: 1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .pulsing {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .glowing {
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        .shimmer-effect {
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .slide-title {
+                font-size: 2.5rem;
+            }
+
+            .slide-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .slide-description {
+                font-size: 1rem;
+            }
+
+            .about-content,
+            .brands-grid,
+            .contact-content,
+            .footer-content,
+
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-title,
+            .section-title,
+            .contact-title {
+                font-size: 2.2rem;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Navigation -->
+  <nav class="navbar" data-aos="fade-down" data-aos-duration="1000">
+  <div class="nav-container">
+    <a href="#home" class="logo-nav floating" id="nav-logo">
+      <img src="images/logo.png" alt="Distinguished Logo" width="700" height="212" style="max-width:180px; height:auto;">
+    </a>
+    <ul class="nav-links">
+      <li data-aos="fade-down" data-aos-delay="100"><a href="#home">Home</a></li>
+      <li data-aos="fade-down" data-aos-delay="200"><a href="#about">About</a></li>
+      <li data-aos="fade-down" data-aos-delay="300"><a href="#brands">Brands</a></li>
+      <li data-aos="fade-down" data-aos-delay="400"><a href="#uniforms">Uniforms</a></li>
+      <li data-aos="fade-down" data-aos-delay="500"><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="mobile-menu-btn pulsing" id="mobileMenuBtn">☰</button>
   </div>
-</div>
+</nav>
 
-<script>
-  // Elegant golden particle animation
-  const c = document.getElementById('bg');
-  const ctx = c.getContext('2d');
-  let w, h, particles;
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <div class="sidebar" id="sidebar"><button class="sidebar-close" id="sidebarClose">✕</button>
+   <ul class="sidebar-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Mr Amazing</a></li>
+    <li><a href="#brands">Our Brands</a></li>
+    <li><a href="#uniforms">Corporate Uniforms</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+   </ul>
+  </div><!-- Hero Section -->
+  <section id="home" class="hero-section">
+   <div class="hero-slider">
+    <div class="slide slide-1 active">
+     <div class="slide-content">
+      <div class="slide-category" data-aos="fade-up" data-aos-delay="200">
+       Premium Wines
+      </div>
+      <h1 class="slide-title glowing" data-aos="zoom-in" data-aos-delay="400">Distinguished Wines</h1>
+      <p class="slide-subtitle" data-aos="fade-up" data-aos-delay="600">Curated Excellence in Every Bottle</p>
+      <p class="slide-description" data-aos="fade-up" data-aos-delay="800">Experience the finest selection of premium wines from renowned vineyards worldwide. Each bottle represents sophistication, quality, and the art of fine winemaking.</p><a href="#brands" class="slide-cta pulsing" data-aos="fade-up" data-aos-delay="1000">Explore Collection</a>
+     </div>
+    </div>
+    <div class="slide slide-2">
+     <div class="slide-content">
+      <div class="slide-category" data-aos="fade-up" data-aos-delay="200">
+       Luxury Fashion
+      </div>
+      <h1 class="slide-title shimmer-effect" data-aos="zoom-in" data-aos-delay="400">Distinguished Fashion</h1>
+      <p class="slide-subtitle" data-aos="fade-up" data-aos-delay="600">Redefining Style in South Africa</p>
+      <p class="slide-description" data-aos="fade-up" data-aos-delay="800">Bespoke clothing, expert styling, and fashion consultation. Mr Amazing has dressed over 100 public figures, bringing luxury and sophistication to every wardrobe.</p><a href="#brands" class="slide-cta floating" data-aos="fade-up" data-aos-delay="1000">Book Consultation</a>
+     </div>
+    </div>
+    <div class="slide slide-3">
+     <div class="slide-content">
+      <div class="slide-category" data-aos="fade-up" data-aos-delay="200">
+       Skills Development
+      </div>
+      <h1 class="slide-title pulsing" data-aos="zoom-in" data-aos-delay="400">Distinguished Training</h1>
+      <p class="slide-subtitle" data-aos="fade-up" data-aos-delay="600">Master the Art of Woodworking</p>
+      <p class="slide-description" data-aos="fade-up" data-aos-delay="800">Professional sawing classes and training programs for woodworking enthusiasts. Learn from industry experts and master various sawing techniques with hands-on experience.</p><a href="#brands" class="slide-cta glowing" data-aos="fade-up" data-aos-delay="1000">Join Classes</a>
+     </div>
+    </div>
+    <div class="slide slide-4">
+     <div class="slide-content">
+      <div class="slide-category" data-aos="fade-up" data-aos-delay="200">
+       Transportation
+      </div>
+      <h1 class="slide-title floating" data-aos="zoom-in" data-aos-delay="400">Distinguished Travels</h1>
+      <p class="slide-subtitle" data-aos="fade-up" data-aos-delay="600">Your Trusted Travel Partner</p>
+      <p class="slide-description" data-aos="fade-up" data-aos-delay="800">Safe, reliable, and comfortable transportation solutions. From airport transfers to corporate events, we provide professional shuttle services with modern vehicles and experienced drivers.</p><a href="#brands" class="slide-cta shimmer-effect" data-aos="fade-up" data-aos-delay="1000">Book Ride</a>
+     </div>
+    </div>
+    <div class="slide slide-5">
+     <div class="slide-content">
+      <div class="slide-category" data-aos="fade-up" data-aos-delay="200">
+       Distinguished Holdings
+      </div>
+      <h1 class="slide-title glowing" id="main-title" data-aos="zoom-in" data-aos-delay="400">Distinguished by Mr Amazing</h1>
+      <p class="slide-subtitle" id="hero-subtitle" data-aos="fade-up" data-aos-delay="600">Premium Wines &amp; Luxury Fashion</p>
+      <p class="slide-description" data-aos="fade-up" data-aos-delay="800">A collection of distinguished brands under one visionary leadership. From luxury fashion to premium wines, professional training to reliable transportation - excellence in every venture.</p><a href="#about" class="slide-cta pulsing" data-aos="fade-up" data-aos-delay="1000">Meet Mr Amazing</a>
+     </div>
+    </div>
+   </div>
+   <div class="slider-nav">
+    <div class="slider-dot active" data-slide="0"></div>
+    <div class="slider-dot" data-slide="1"></div>
+    <div class="slider-dot" data-slide="2"></div>
+    <div class="slider-dot" data-slide="3"></div>
+    <div class="slider-dot" data-slide="4"></div>
+   </div>
+  </section><!-- About Section -->
+  <section id="about" class="about-section">
+   <div class="container">
+    <div class="about-content">
+     <div class="about-text">
+      <h2 class="about-title floating" id="about-title" data-aos="fade-right" data-aos-duration="1000">Meet Mr Amazing</h2>
+      <p class="founder-name shimmer-effect" id="founder-name" data-aos="fade-right" data-aos-delay="200">Ishmael Ndzalama Baloyi</p>
+      <p class="founder-subtitle" data-aos="fade-right" data-aos-delay="400">Founder &amp; Creative Director of Distinguished Holdings</p>
+      <p class="about-description" id="about-description" data-aos="fade-up" data-aos-delay="600">Popularly known as "Mr Amazing" or "Mr A", Ishmael has been passionate about style since his early school days, where his impeccable dress sense set him apart from his peers. After 10 years of dedicated service in the South African Police Services, he followed his true calling back to fashion.</p>
+      <p class="about-description" data-aos="fade-up" data-aos-delay="800">As a style saviour to South Africans, Mr A has dressed over 100 public figures and celebrated icons, becoming a force to be reckoned with in the fashion industry. His expertise spans styling, tailoring, and fashion blogging.</p>
+      <p class="about-description" data-aos="fade-up" data-aos-delay="1000">Through the Distinguished Skills Development Centre, he educates and empowers upcoming talent in style etiquette, fabric selection, and conceptualizing ideas that match clients' needs. Whether you need style redefinition, occasional couture advice, or fabric selection guidance - Mr Amazing is your guy.</p>
+     </div>
+     <div class="about-image"><img src="images/ishmael.jpg" alt="Mr Amazing - Ndzalama Ishmael Baloyi" class="floating" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+     </div>
+    </div>
+   </div>
+  </section><!-- Brands Section -->
+  <section id="brands" class="brands-section">
+   <div class="container">
+    <h2 class="section-title glowing" data-aos="zoom-in" data-aos-duration="1000">Our Distinguished Brands</h2>
+    <div class="brands-grid">
+     <div class="brand-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800"><img src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Distinguished Wines" class="brand-image" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+      <h3 class="brand-title floating">Distinguished Wines</h3>
+      <p class="brand-description">Curated collection of premium wines from renowned vineyards. Each bottle represents excellence, sophistication, and the art of fine winemaking.</p><a href="#contact" class="brand-btn pulsing">Explore Collection</a>
+     </div>
+     <div class="brand-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800"><img src="images/fash.jpg" alt="Distinguished Fashion" class="brand-image" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+      <h3 class="brand-title shimmer-effect">Distinguished Fashion</h3>
+      <p class="brand-description">Luxury fashion and personal styling services. Bespoke clothing, expert styling, and fashion consultation for the discerning individual.</p><a href="#contact" class="brand-btn glowing">Book Consultation</a>
+     </div>
+     <div class="brand-card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800"><img src="images/train.jpg" alt="Distinguished Training" class="brand-image" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+      <h3 class="brand-title pulsing">Distinguished Training</h3>
+      <p class="brand-description">Professional sawing classes and woodworking training programs. Hands-on instruction, industry insights, and certification programs for all skill levels.</p><a href="#contact" class="brand-btn floating">Join Classes</a>
+     </div>
+     <div class="brand-card" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800"><img src="images/cars.jpg" alt="Distinguished Travels" class="brand-image" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+      <h3 class="brand-title glowing">Distinguished Travels</h3>
+      <p class="brand-description">Safe, reliable transportation solutions. Airport transfers, corporate shuttles, event transportation, and customized travel plans with modern vehicles.</p><a href="#contact" class="brand-btn shimmer-effect">Book Ride</a>
+     </div>
+     <div class="brand-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800"><img src="images/uni.jpg" alt="Distinguished Corporate Uniforms" class="brand-image" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+      <h3 class="brand-title floating">Distinguished Corporate Uniforms</h3>
+      <p class="brand-description">Bespoke uniforms that empower businesses to present their best selves. Expert design, quality materials, and personalized service from concept to delivery.</p><a href="#uniforms" class="brand-btn pulsing">Learn More</a>
+     </div>
+    </div>
+   </div>
+  </section><!-- Corporate Uniforms Section -->
 
-  function resize(){
-    w = c.width = innerWidth;
-    h = c.height = innerHeight;
-    particles = Array.from({length: Math.floor((w+h)/40)}, () => ({
-      x: Math.random()*w,
-      y: Math.random()*h,
-      r: Math.random()*2+1,
-      dx: Math.random()*0.6-0.3,
-      dy: Math.random()*0.6-0.3,
-    }));
-  }
-  window.addEventListener('resize', resize);
-  resize();
+  <!-- Why Choose Us Section -->
+<section id="why-choose" class="why-choose-section">
+  <div class="container">
+    <h2 class="section-title glowing" data-aos="zoom-in" data-aos-duration="1000">
+      Why Choose Distinguished
+    </h2>
 
-  function draw(){
-    ctx.clearRect(0,0,w,h);
-    ctx.fillStyle='rgba(200,161,90,0.3)';
-    for(const p of particles){
-      ctx.beginPath();
-      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fill();
-      p.x+=p.dx; p.y+=p.dy;
-      if(p.x<0||p.x>w) p.dx*=-1;
-      if(p.y<0||p.y>h) p.dy*=-1;
-    }
-    requestAnimationFrame(draw);
-  }
-  draw();
-</script>
+    <div class="benefits-grid">
+      <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-gem benefit-icon pulsing"></i>
+        <h3 class="benefit-title">Premium Quality</h3>
+        <p class="benefit-desc">
+          Every product and service under Distinguished Holdings embodies excellence, precision, and sophistication — reflecting our signature standard of luxury.
+        </p>
+      </div>
 
-</body>
+      <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-user-tie benefit-icon floating"></i>
+        <h3 class="benefit-title">Expert Leadership</h3>
+        <p class="benefit-desc">
+          Led by the visionary Mr Amazing, our diverse portfolio thrives under creativity, consistency, and a passion for perfection.
+        </p>
+      </div>
+
+      <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-hands-helping benefit-icon glowing"></i>
+        <h3 class="benefit-title">Trusted Partnerships</h3>
+        <p class="benefit-desc">
+          We build long-lasting relationships with clients and brands, delivering results that exceed expectations and inspire loyalty.
+        </p>
+      </div>
+
+      <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
+        <i class="fas fa-bolt benefit-icon pulsing"></i>
+        <h3 class="benefit-title">Innovation & Style</h3>
+        <p class="benefit-desc">
+          From fashion and wine to transport and training — we constantly redefine style, functionality, and class through innovation.
+        </p>
+      </div>
+
+      <div class="benefit-item" data-aos="fade-up" data-aos-delay="500">
+        <i class="fas fa-smile benefit-icon floating"></i>
+        <h3 class="benefit-title">Customer Satisfaction</h3>
+        <p class="benefit-desc">
+          Our clients’ happiness is our priority. We provide personalized service, clear communication, and consistent excellence that keeps customers coming back.
+        </p>
+      </div>
+
+      <div class="benefit-item" data-aos="fade-up" data-aos-delay="600">
+        <i class="fas fa-globe benefit-icon glowing"></i>
+        <h3 class="benefit-title">Versatility Across Industries</h3>
+        <p class="benefit-desc">
+          Distinguished Holdings spans multiple sectors — from luxury fashion to logistics and training — offering reliable quality no matter the field.
+        </p>
+      </div>
+    </div>
+
+    <div class="promise-section" data-aos="fade-up" data-aos-delay="700">
+      <p class="promise-text">
+        Distinguished Holdings is more than a brand — it’s a lifestyle of excellence. We bring luxury, reliability, and passion together for a truly remarkable experience.
+      </p>
+      <div class="cta-section">
+        <a href="#contact" class="uniforms-cta floating">Get In Touch</a>
+        <p class="cta-subtitle">Let’s create something extraordinary together</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  <section id="contact" class="contact-section">
+  <div class="container">
+    <div class="contact-content">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <img src="images/logo.png" alt="Distinguished Logo" class="floating" style="max-width:270px; height:auto; margin-bottom:20px;">
+        <h2 class="contact-title pulsing" id="contact-title" data-aos="fade-right" data-aos-duration="1000">
+          Get In Touch
+        </h2>
+
+        <div class="contact-details">
+          <div class="contact-item" data-aos="fade-right" data-aos-delay="200">
+            <i class="fas fa-phone contact-icon floating"></i>
+            <a href="tel:+27659795627" class="contact-link" id="phone-link">
+              <span id="phone-number">+27 65 979 5627</span>
+            </a>
+          </div>
+
+          <div class="contact-item" data-aos="fade-right" data-aos-delay="400">
+            <i class="fab fa-instagram contact-icon pulsing"></i>
+            <a href="https://www.instagram.com/mramazing_the_stylist" target="_blank" rel="noopener noreferrer" class="contact-link" id="instagram-link">
+              <span id="instagram-handle">@mramazing_the_stylist</span>
+            </a>
+          </div>
+
+          <div class="contact-item" data-aos="fade-right" data-aos-delay="600">
+            <i class="fas fa-envelope contact-icon glowing"></i>
+            <span class="contact-link">info@distinguished.co.za</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <form class="contact-form" id="contactForm" data-aos="fade-left" data-aos-duration="1000">
+        <div class="form-group" data-aos="fade-up" data-aos-delay="200">
+          <label for="name" class="form-label">Full Name</label>
+          <input type="text" id="name" name="name" class="form-input" required>
+        </div>
+
+        <div class="form-group" data-aos="fade-up" data-aos-delay="300">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" id="email" name="email" class="form-input" required>
+        </div>
+
+        <div class="form-group" data-aos="fade-up" data-aos-delay="400">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" id="subject" name="subject" class="form-input" required>
+        </div>
+
+        <div class="form-group" data-aos="fade-up" data-aos-delay="500">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" class="form-textarea" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn shimmer-effect" data-aos="fade-up" data-aos-delay="600">
+          Send via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+
+      <!-- Brand + Socials -->
+      <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/logo.png" alt="Distinguished Logo" class="floating" style="max-width:180px; height:auto; margin-bottom:15px;">
+        <p style="color: rgba(200, 161, 90, 0.8); margin-bottom: 15px;">
+          Excellence in every venture under the visionary leadership of Mr Amazing.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/mramazing_the_stylist" target="_blank" rel="noopener noreferrer" class="social-link pulsing">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/MrAmazingTheStylist/" target="_blank" rel="noopener noreferrer" class="social-link pulsing">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="tel:+27659795627" class="social-link floating">
+            <i class="fas fa-phone"></i>
+          </a>
+          <a href="mailto:info@distinguished.co.za" class="social-link glowing">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Our Brands -->
+      <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="shimmer-effect">Our Brands</h3>
+        <ul class="footer-links">
+          <li><a href="#brands">Distinguished Wines</a></li>
+          <li><a href="#brands">Distinguished Fashion</a></li>
+          <li><a href="#brands">Distinguished Training</a></li>
+          <li><a href="#brands">Distinguished Travels</a></li>
+          <li><a href="#uniforms">Corporate Uniforms</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section" data-aos="fade-up" data-aos-delay="300">
+        <h3 class="pulsing">Services</h3>
+        <ul class="footer-links">
+          <li><a href="#contact">Wine Collection</a></li>
+          <li><a href="#contact">Personal Styling</a></li>
+          <li><a href="#contact">Woodworking Classes</a></li>
+          <li><a href="#contact">Transportation</a></li>
+          <li><a href="#contact">Consultation</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section footer-contact" data-aos="fade-up" data-aos-delay="400">
+        <h3 class="glowing">Contact Info</h3>
+        <p><i class="fas fa-phone contact-icon"></i> <span id="footer-phone">+27 65 979 5627</span></p>
+        <p><i class="fas fa-envelope contact-icon"></i> info@distinguished.co.za</p>
+        <p><i class="fab fa-instagram contact-icon"></i> <span id="footer-instagram">@mramazing_the_stylist</span></p>
+        <p><i class="fas fa-map-marker-alt contact-icon"></i> South Africa</p>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom" data-aos="fade-up" data-aos-delay="500">
+      <p class="footer-text shimmer-effect">
+        © 2024 Distinguished by Mr Amazing. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+  <script>
+        const defaultConfig = {
+            main_title: "Distinguished by Mr Amazing",
+            hero_subtitle: "Premium Wines & Luxury Fashion",
+            about_title: "Meet Mr Amazing",
+            founder_name: "Ishmael Ndzalama Baloyi",
+            about_description: "Popularly known as \"Mr Amazing\" or \"Mr A\", Ishmael has been passionate about style since his early school days, where his impeccable dress sense set him apart from his peers. After 10 years of dedicated service in the South African Police Services, he followed his true calling back to fashion.",
+            contact_title: "Get In Touch",
+            phone_number: "+27 65 979 5627",
+            instagram_handle: "@mramazing_the_stylist",
+            background_color: "#000000",
+            accent_color: "#d4af37",
+            text_color: "#c8a15a",
+            font_family: "Segoe UI",
+            font_size: 16
+        };
+
+        // Mobile Menu Functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const sidebar = document.getElementById('sidebar');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        const sidebarClose = document.getElementById('sidebarClose');
+
+        function openSidebar() {
+            sidebar.classList.add('active');
+            sidebarOverlay.classList.add('active');
+        }
+
+        function closeSidebar() {
+            sidebar.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
+        }
+
+        mobileMenuBtn.addEventListener('click', openSidebar);
+        sidebarClose.addEventListener('click', closeSidebar);
+        sidebarOverlay.addEventListener('click', closeSidebar);
+
+        // Close sidebar when clicking on links
+        document.querySelectorAll('.sidebar-links a').forEach(link => {
+            link.addEventListener('click', closeSidebar);
+        });
+
+        // Hero Slider Functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dot');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Auto-advance slides
+        setInterval(nextSlide, 5000);
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+
+        // Contact Form WhatsApp Integration
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            const whatsappMessage = `Hello! I'm ${name}.\n\nEmail: ${email}\nSubject: ${subject}\n\nMessage: ${message}`;
+            const phoneNumber = document.getElementById('phone-number').textContent.replace(/\s+/g, '');
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(0, 0, 0, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+            }
+        });
+
+        async function onConfigChange(config) {
+            const mainTitle = config.main_title || defaultConfig.main_title;
+            const heroSubtitle = config.hero_subtitle || defaultConfig.hero_subtitle;
+            const aboutTitle = config.about_title || defaultConfig.about_title;
+            const founderName = config.founder_name || defaultConfig.founder_name;
+            const aboutDescription = config.about_description || defaultConfig.about_description;
+            const contactTitle = config.contact_title || defaultConfig.contact_title;
+            const phoneNumber = config.phone_number || defaultConfig.phone_number;
+            const instagramHandle = config.instagram_handle || defaultConfig.instagram_handle;
+            const backgroundColor = config.background_color || defaultConfig.background_color;
+            const accentColor = config.accent_color || defaultConfig.accent_color;
+            const textColor = config.text_color || defaultConfig.text_color;
+            const fontFamily = config.font_family || defaultConfig.font_family;
+            const fontSize = config.font_size || defaultConfig.font_size;
+
+            // Update text content
+            document.getElementById('nav-logo').textContent = mainTitle.split(' ')[0];
+            document.getElementById('main-title').textContent = mainTitle;
+            document.getElementById('hero-subtitle').textContent = heroSubtitle;
+            document.getElementById('about-title').textContent = aboutTitle;
+            document.getElementById('founder-name').textContent = founderName;
+            document.getElementById('about-description').textContent = aboutDescription;
+            document.getElementById('contact-title').textContent = contactTitle;
+            document.getElementById('phone-number').textContent = phoneNumber;
+            document.getElementById('instagram-handle').textContent = instagramHandle;
+
+            // Update contact links
+            document.getElementById('phone-link').href = `tel:${phoneNumber}`;
+            const instagramUrl = instagramHandle.startsWith('@') 
+                ? `https://www.instagram.com/${instagramHandle.substring(1)}`
+                : `https://www.instagram.com/${instagramHandle}`;
+            document.getElementById('instagram-link').href = instagramUrl;
+
+            // Update footer contact info
+            document.getElementById('footer-phone').textContent = phoneNumber;
+            document.getElementById('footer-instagram').textContent = instagramHandle;
+
+            // Update colors
+            document.body.style.background = backgroundColor;
+            document.body.style.color = textColor;
+            
+            // Update accent colors
+            const accentElements = document.querySelectorAll('.logo-nav, .hero-title, .about-title, .section-title, .contact-title, .brand-title, .form-label, .contact-icon, .slider-dot.active');
+            accentElements.forEach(el => {
+                el.style.color = accentColor;
+            });
+
+            // Update font
+            const fontStack = `${fontFamily}, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`;
+            document.body.style.fontFamily = fontStack;
+
+            // Update font sizes proportionally
+            document.querySelector('.hero-title').style.fontSize = `${fontSize * 4}px`;
+            document.querySelector('.hero-subtitle').style.fontSize = `${fontSize * 1.5}px`;
+            document.querySelectorAll('.about-title, .section-title, .contact-title').forEach(el => {
+                el.style.fontSize = `${fontSize * 3}px`;
+            });
+            document.querySelectorAll('.brand-title').forEach(el => {
+                el.style.fontSize = `${fontSize * 2}px`;
+            });
+            document.querySelectorAll('.about-description, .brand-description').forEach(el => {
+                el.style.fontSize = `${fontSize * 1.2}px`;
+            });
+        }
+
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [
+                    {
+                        get: () => config.background_color || defaultConfig.background_color,
+                        set: (value) => {
+                            config.background_color = value;
+                            if (window.elementSdk) {
+                                window.elementSdk.setConfig({ background_color: value });
+                            }
+                        }
+                    },
+                    {
+                        get: () => config.accent_color || defaultConfig.accent_color,
+                        set: (value) => {
+                            config.accent_color = value;
+                            if (window.elementSdk) {
+                                window.elementSdk.setConfig({ accent_color: value });
+                            }
+                        }
+                    },
+                    {
+                        get: () => config.text_color || defaultConfig.text_color,
+                        set: (value) => {
+                            config.text_color = value;
+                            if (window.elementSdk) {
+                                window.elementSdk.setConfig({ text_color: value });
+                            }
+                        }
+                    }
+                ],
+                borderables: [],
+                fontEditable: {
+                    get: () => config.font_family || defaultConfig.font_family,
+                    set: (value) => {
+                        config.font_family = value;
+                        if (window.elementSdk) {
+                            window.elementSdk.setConfig({ font_family: value });
+                        }
+                    }
+                },
+                fontSizeable: {
+                    get: () => config.font_size || defaultConfig.font_size,
+                    set: (value) => {
+                        config.font_size = value;
+                        if (window.elementSdk) {
+                            window.elementSdk.setConfig({ font_size: value });
+                        }
+                    }
+                }
+            };
+        }
+
+        function mapToEditPanelValues(config) {
+            return new Map([
+                ["main_title", config.main_title || defaultConfig.main_title],
+                ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+                ["about_title", config.about_title || defaultConfig.about_title],
+                ["founder_name", config.founder_name || defaultConfig.founder_name],
+                ["about_description", config.about_description || defaultConfig.about_description],
+                ["contact_title", config.contact_title || defaultConfig.contact_title],
+                ["phone_number", config.phone_number || defaultConfig.phone_number],
+                ["instagram_handle", config.instagram_handle || defaultConfig.instagram_handle]
+            ]);
+        }
+
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false,
+            offset: 100
+        });
+
+        // Initialize the Element SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'995165ce463a4ed5',t:'MTc2MTU1OTc2NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
