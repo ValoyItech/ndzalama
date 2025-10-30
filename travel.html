@@ -1,0 +1,1507 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distinguished Travels & Shuttles | Luxury Transport by Mr Amazing</title>
+
+  <meta name="description" content="Distinguished Travels and Shuttles — luxury, safe, and reliable transport solutions by Mr Amazing. From airport transfers to VIP travel, arrive in style and comfort.">
+  <meta name="keywords" content="Distinguished Travels, Distinguished Shuttles, Mr Amazing, Ishmael Ndzalama Baloyi, luxury transport South Africa, airport transfers, travel services, corporate travel, Distinguished Holdings">
+  <meta name="author" content="Distinguished Holdings">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.distinguishedd.co.za/travel.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Distinguished Travels & Shuttles | Luxury Transport by Mr Amazing">
+  <meta property="og:description" content="Luxury transport and shuttle services by Mr Amazing — where every trip is first class.">
+  <meta property="og:image" content="https://www.distinguishedd.co.za/images/herocars.png">
+  <meta property="og:url" content="https://www.distinguishedd.co.za/travel.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Distinguished by Mr Amazing">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Distinguished Travels & Shuttles | Luxury Transport by Mr Amazing">
+  <meta name="twitter:description" content="Travel with distinction — premium shuttle and chauffeur services by Mr Amazing.">
+  <meta name="twitter:image" content="https://www.distinguishedd.co.za/images/herocars.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+        body {
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+        
+        /* Luxury Travel Color System */
+        :root {
+            --luxury-gold: #d4af37;
+            --luxury-dark-gold: #b8941f;
+            --luxury-champagne: #f7e7ce;
+            --luxury-navy: #1a2332;
+            --luxury-dark-navy: #0f1419;
+            --luxury-charcoal: #2d3748;
+            --luxury-platinum: #e2e8f0;
+            --luxury-pearl: #f8fafc;
+            --luxury-white: #ffffff;
+            --luxury-cream: #fefcf7;
+        }
+        
+        /* Luxury Travel Layout */
+        .travel-container {
+            background: linear-gradient(135deg, var(--luxury-cream) 0%, var(--luxury-champagne) 50%, var(--luxury-pearl) 100%);
+            min-height: 100%;
+        }
+        
+        /* Luxury Navigation */
+        .nav-header {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            background: rgba(26, 35, 50, 0.95);
+            border-bottom: 1px solid var(--luxury-gold);
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+            color: var(--luxury-champagne) !important;
+        }
+        
+        .nav-link:hover {
+            color: var(--luxury-gold) !important;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--luxury-gold), var(--luxury-dark-gold));
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+            min-height: 600px;
+        }
+        
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        
+        .hero-slide.active {
+            opacity: 1;
+        }
+        
+        .hero-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(26, 35, 50, 0.85) 0%, rgba(212, 175, 55, 0.3) 30%, rgba(15, 20, 25, 0.8) 70%, rgba(26, 35, 50, 0.9) 100%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slide-indicators {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            space-x: 8px;
+            z-index: 20;
+        }
+        
+        .slide-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 4px;
+        }
+        
+        .slide-indicator.active {
+            background: white;
+            transform: scale(1.2);
+        }
+        
+        .hero-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 20;
+            backdrop-filter: blur(10px);
+        }
+        
+        .hero-nav:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .hero-nav.prev {
+            left: 30px;
+        }
+        
+        .hero-nav.next {
+            right: 30px;
+        }
+        
+        /* Vehicle Icons Animation */
+        .vehicle-float {
+            position: absolute;
+            animation: vehicle-drift 15s linear infinite;
+            opacity: 0.1;
+        }
+        
+        @keyframes vehicle-drift {
+            0% { transform: translateX(-100px) translateY(0px); }
+            50% { transform: translateX(50px) translateY(-30px); }
+            100% { transform: translateX(200px) translateY(0px); }
+        }
+        
+        /* Luxury Service Cards */
+        .service-card {
+            background: linear-gradient(145deg, var(--luxury-white) 0%, var(--luxury-cream) 100%);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(26, 35, 50, 0.12), 0 2px 8px rgba(212, 175, 55, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.08), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .service-card:hover::before {
+            left: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 25px 50px rgba(26, 35, 50, 0.2), 0 8px 20px rgba(212, 175, 55, 0.15);
+            border-color: var(--luxury-gold);
+        }
+        
+        .service-icon {
+            background: linear-gradient(135deg, var(--luxury-gold), var(--luxury-dark-gold));
+            color: var(--luxury-navy);
+            width: 70px;
+            height: 70px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        /* Route Animation */
+        .route-line {
+            position: relative;
+            height: 2px;
+            background: #e2e8f0;
+            overflow: hidden;
+        }
+        
+        .route-line::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #d4af37, #b8941f, #6b7280);
+            animation: route-progress 3s ease-in-out infinite;
+        }
+        
+        @keyframes route-progress {
+            0% { transform: translateX(-100%); }
+            50% { transform: translateX(0%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        /* Stats Counter Animation */
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #d4af37, #b8941f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Luxury Button Styles */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--luxury-gold), var(--luxury-dark-gold));
+            color: var(--luxury-navy);
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3), 0 2px 8px rgba(26, 35, 50, 0.1);
+            text-transform: uppercase;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--luxury-dark-gold), var(--luxury-navy));
+            transition: left 0.4s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4), 0 4px 15px rgba(26, 35, 50, 0.2);
+        }
+        
+        .btn-primary:hover::before {
+            left: 0;
+        }
+        
+        .btn-primary span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .btn-primary:hover span {
+            color: var(--luxury-gold);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--luxury-gold);
+            border: 2px solid var(--luxury-gold);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            text-transform: uppercase;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--luxury-gold);
+            color: var(--luxury-navy);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        }
+        
+        /* Typography */
+        .font-travel { font-family: 'Poppins', sans-serif; }
+        .font-body { font-family: 'Inter', sans-serif; }
+        
+        /* Testimonial Cards */
+        .testimonial-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(30, 64, 175, 0.1);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(30, 64, 175, 0.15);
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: #0ea5e9;
+            font-family: serif;
+            opacity: 0.3;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 4rem 1rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .service-card {
+                margin-bottom: 1rem;
+            }
+        }
+        
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Loading Animation */
+        .loading-spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            animation: pulse-whatsapp 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+        }
+        
+        @keyframes pulse-whatsapp {
+            0% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.7), 0 0 0 10px rgba(37, 211, 102, 0.1); }
+            100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+        }
+        
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #1a365d;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 6px solid transparent;
+            border-left-color: #1a365d;
+        }
+        
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+        }
+
+        /* Contact Form */
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #ed8936;
+            box-shadow: 0 0 0 3px rgba(237, 137, 54, 0.1);
+        }
+        
+        /* Fleet Showcase */
+        .fleet-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .fleet-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="font-body bg-gray-50"><!-- Navigation Header -->
+  <header class="nav-header fixed top-0 left-0 right-0 z-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16"><!-- Logo -->
+     <div class="flex-shrink-0">
+      <div class="flex items-center space-x-3">
+       <div class="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center shadow-lg" style="background: linear-gradient(135deg, var(--luxury-gold), var(--luxury-dark-gold)); box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);">
+        <svg class="w-6 h-6 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M18.92,6.01C18.72,5.42 18.16,5 17.5,5H15V4A2,2 0 0,0 13,2H11A2,2 0 0,0 9,4V5H6.5C5.84,5 5.28,5.42 5.08,6.01L3,12V20A1,1 0 0,0 4,21H5A1,1 0 0,0 6,20V19H18V20A1,1 0 0,0 19,21H20A1,1 0 0,0 21,20V12L18.92,6.01M6.5,7H17.5L19,11H5L6.5,7M11,4H13V5H11V4M7.5,16A1.5,1.5 0 0,1 6,14.5A1.5,1.5 0 0,1 7.5,13A1.5,1.5 0 0,1 9,14.5A1.5,1.5 0 0,1 7.5,16M16.5,16A1.5,1.5 0 0,1 15,14.5A1.5,1.5 0 0,1 16.5,13A1.5,1.5 0 0,1 18,14.5A1.5,1.5 0 0,1 16.5,16Z" />
+        </svg>
+       </div>
+       <div>
+        <h1 id="company-name" class="font-travel text-lg font-bold" style="color: var(--luxury-gold); text-shadow: 0 2px 4px rgba(0,0,0,0.1);">Distinguished Travels</h1>
+        <p class="font-body text-xs" style="color: var(--luxury-champagne);">&amp; Shuttles</p>
+       </div>
+      </div>
+     </div><!-- Desktop Navigation -->
+     <nav class="hidden md:flex items-center space-x-8"><button onclick="scrollToSection('hero')" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Home</button> <button onclick="scrollToSection('services')" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Services</button> <button onclick="scrollToSection('about')" class="nav-link text-gray-700 hover:text-blue-700 font-medium">About</button> <button onclick="scrollToSection('fleet')" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Fleet</button> <button onclick="scrollToSection('contact')" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Contact</button> <button onclick="openWhatsApp('booking')" class="btn-primary rounded-full px-6 py-2"> <span>Book Now</span> </button>
+     </nav><!-- Mobile Menu Button -->
+     <div class="md:hidden"><button onclick="toggleMobileMenu()" class="text-gray-700 hover:text-blue-700">
+       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+       </svg></button>
+     </div>
+    </div>
+   </div>
+  </header><!-- Mobile Sidebar Menu -->
+  <div id="mobile-menu" class="fixed inset-y-0 right-0 z-50 w-80 bg-gradient-to-b from-slate-800 to-slate-900 shadow-xl transform translate-x-full transition-transform duration-300 md:hidden">
+   <div class="flex flex-col h-full">
+    <div class="flex items-center justify-between p-6 border-b border-slate-700">
+     <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg flex items-center justify-center">
+       <svg class="w-5 h-5 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M18.92,6.01C18.72,5.42 18.16,5 17.5,5H15V4A2,2 0 0,0 13,2H11A2,2 0 0,0 9,4V5H6.5C5.84,5 5.28,5.42 5.08,6.01L3,12V20A1,1 0 0,0 4,21H5A1,1 0 0,0 6,20V19H18V20A1,1 0 0,0 19,21H20A1,1 0 0,0 21,20V12L18.92,6.01M6.5,7H17.5L19,11H5L6.5,7M11,4H13V5H11V4M7.5,16A1.5,1.5 0 0,1 6,14.5A1.5,1.5 0 0,1 7.5,13A1.5,1.5 0 0,1 9,14.5A1.5,1.5 0 0,1 7.5,16M16.5,16A1.5,1.5 0 0,1 15,14.5A1.5,1.5 0 0,1 16.5,13A1.5,1.5 0 0,1 18,14.5A1.5,1.5 0 0,1 16.5,16Z" />
+       </svg>
+      </div>
+      <div>
+       <h2 class="font-travel font-bold text-white">Distinguished</h2>
+       <p class="text-xs text-slate-300">Travels &amp; Shuttles</p>
+      </div>
+     </div><button onclick="toggleMobileMenu()" class="text-slate-400 hover:text-white">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg></button>
+    </div>
+    <nav class="flex-1 px-6 py-8 space-y-2"><button onclick="scrollToSection('hero'); toggleMobileMenu();" class="w-full text-left py-4 px-4 text-slate-300 hover:bg-slate-700 hover:text-white rounded-xl transition-all flex items-center space-x-3">
+      <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+       <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+      </svg><span>Home</span> </button> <button onclick="scrollToSection('services'); toggleMobileMenu();" class="w-full text-left py-4 px-4 text-slate-300 hover:bg-slate-700 hover:text-white rounded-xl transition-all flex items-center space-x-3">
+      <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+       <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8Z" />
+      </svg><span>Services</span> </button> <button onclick="scrollToSection('about'); toggleMobileMenu();" class="w-full text-left py-4 px-4 text-slate-300 hover:bg-slate-700 hover:text-white rounded-xl transition-all flex items-center space-x-3">
+      <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+       <path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+      </svg><span>About</span> </button> <button onclick="scrollToSection('fleet'); toggleMobileMenu();" class="w-full text-left py-4 px-4 text-slate-300 hover:bg-slate-700 hover:text-white rounded-xl transition-all flex items-center space-x-3">
+      <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+       <path d="M18.92,6.01C18.72,5.42 18.16,5 17.5,5H15V4A2,2 0 0,0 13,2H11A2,2 0 0,0 9,4V5H6.5C5.84,5 5.28,5.42 5.08,6.01L3,12V20A1,1 0 0,0 4,21H5A1,1 0 0,0 6,20V19H18V20A1,1 0 0,0 19,21H20A1,1 0 0,0 21,20V12L18.92,6.01M6.5,7H17.5L19,11H5L6.5,7M11,4H13V5H11V4M7.5,16A1.5,1.5 0 0,1 6,14.5A1.5,1.5 0 0,1 7.5,13A1.5,1.5 0 0,1 9,14.5A1.5,1.5 0 0,1 7.5,16M16.5,16A1.5,1.5 0 0,1 15,14.5A1.5,1.5 0 0,1 16.5,13A1.5,1.5 0 0,1 18,14.5A1.5,1.5 0 0,1 16.5,16Z" />
+      </svg><span>Fleet</span> </button> <button onclick="scrollToSection('contact'); toggleMobileMenu();" class="w-full text-left py-4 px-4 text-slate-300 hover:bg-slate-700 hover:text-white rounded-xl transition-all flex items-center space-x-3">
+      <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+       <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
+      </svg><span>Contact</span> </button>
+     <div class="pt-6 border-t border-slate-700"><button onclick="openWhatsApp('booking'); toggleMobileMenu();" class="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-white rounded-xl py-4 px-6 font-semibold flex items-center justify-center space-x-2 hover:from-yellow-600 hover:to-yellow-700 transition-all">
+       <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472,14.382C17.367,14.382 17.264,14.382 17.157,14.382C16.909,14.382 16.67,14.316 16.447,14.215C15.989,14.006 15.572,13.718 15.207,13.366C14.842,13.014 14.554,12.596 14.345,12.138C14.244,11.915 14.178,11.676 14.178,11.428C14.178,11.321 14.178,11.218 14.178,11.113C14.178,10.865 14.244,10.626 14.345,10.403C14.554,9.945 14.842,9.527 15.207,9.175C15.572,8.823 15.989,8.535 16.447,8.326C16.67,8.225 16.909,8.159 17.157,8.159C17.264,8.159 17.367,8.159 17.472,8.159C17.72,8.159 17.959,8.225 18.182,8.326C18.64,8.535 19.058,8.823 19.41,9.175C19.762,9.527 20.05,9.945 20.259,10.403C20.36,10.626 20.426,10.865 20.426,11.113C20.426,11.218 20.426,11.321 20.426,11.428C20.426,11.676 20.36,11.915 20.259,12.138C20.05,12.596 19.762,13.014 19.41,13.366C19.058,13.718 18.64,14.006 18.182,14.215C17.959,14.316 17.72,14.382 17.472,14.382Z" />
+       </svg><span>Book Now</span> </button>
+     </div>
+     <div class="pt-6">
+      <div class="text-center text-slate-400 text-sm">
+       <p>24/7 Service Available</p>
+       <p class="text-yellow-400 font-semibold">+27 65 979 5627</p>
+      </div>
+     </div>
+    </nav>
+   </div>
+  </div><!-- Mobile Menu Overlay -->
+  <div id="mobile-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden" onclick="toggleMobileMenu()"></div><!-- Main Content -->
+  <div class="travel-container pt-16"><!-- Hero Section with Image Slider -->
+   <section id="hero" class="hero-section">
+    <div class="hero-slider"><!-- Slide 1: Airport Transfer -->
+     <div class="hero-slide active" style="background-image: url('images/fle1.jpg');">
+     </div><!-- Slide 2: Luxury Vehicle -->
+     <div class="hero-slide" style="background-image: url('images/fle2.jpg');">
+     </div><!-- Slide 3: Gauteng Scenery -->
+     <div class="hero-slide" style="background-image: url('images/fle3.jpg');">
+     </div><!-- Slide 4: Group Transportation -->
+     <div class="hero-slide" style="background-image: url('images/gla.jpg');">
+     </div>
+    </div><!-- Navigation Arrows --> <button class="hero-nav prev" onclick="changeSlide(-1)">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+     </svg></button> <button class="hero-nav next" onclick="changeSlide(1)">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+     </svg></button> <!-- Hero Content -->
+    <div class="hero-content">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+      <h1 id="main-tagline" class="font-travel text-4xl md:text-6xl lg:text-7xl font-bold mb-6 fade-in">Your trusted travel partner</h1>
+      <p id="hero-subtitle" class="font-body text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto fade-in" style="animation-delay: 0.3s;">Safe, reliable, and comfortable transportation solutions for all your travel needs</p>
+      <div class="route-line max-w-md mx-auto mb-8"></div>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in" style="animation-delay: 0.6s;"><button onclick="openWhatsApp('booking')" class="btn-primary text-lg px-8 py-4"> <span>Book Your Journey</span> </button> <button onclick="scrollToSection('services')" class="btn-secondary text-lg px-8 py-4"> View Services </button>
+      </div><!-- Quick Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 fade-in" style="animation-delay: 0.9s;">
+       <div class="text-center">
+        <div class="stat-number">
+         500+
+        </div>
+        <p class="text-sm opacity-80">Happy Clients</p>
+       </div>
+       <div class="text-center">
+        <div class="stat-number">
+         24/7
+        </div>
+        <p class="text-sm opacity-80">Service</p>
+       </div>
+       <div class="text-center">
+        <div class="stat-number">
+         15+
+        </div>
+        <p class="text-sm opacity-80">Vehicles</p>
+       </div>
+       <div class="text-center">
+        <div class="stat-number">
+         5★
+        </div>
+        <p class="text-sm opacity-80">Rating</p>
+       </div>
+      </div>
+     </div>
+    </div><!-- Slide Indicators -->
+    <div class="slide-indicators">
+     <div class="slide-indicator active" onclick="goToSlide(0)"></div>
+     <div class="slide-indicator" onclick="goToSlide(1)"></div>
+     <div class="slide-indicator" onclick="goToSlide(2)"></div>
+     <div class="slide-indicator" onclick="goToSlide(3)"></div>
+    </div>
+   </section><!-- Services Section -->
+   <section id="services" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16">
+      <h2 id="services-title" class="font-travel text-3xl md:text-4xl font-bold text-gray-800 mb-4 fade-in">Our Services</h2>
+      <p class="font-body text-lg text-gray-600 max-w-2xl mx-auto fade-in">Professional transportation solutions tailored to meet your specific needs</p>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="service-card p-8 fade-in">
+       <div class="service-icon">
+        <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M17,12C17,10.89 16.1,10 15,10C13.89,10 13,10.89 13,12A2,2 0 0,0 15,14A2,2 0 0,0 17,12M12.5,8H18.5C19.04,8 19.5,8.46 19.5,9V18C19.5,18.54 19.04,19 18.5,19H12.5C11.96,19 11.5,18.54 11.5,18V9C11.5,8.46 11.96,8 12.5,8M18.5,9.5H12.5V17.5H18.5V9.5M9.5,11H10.5V13H9.5V11M7.5,11H8.5V13H7.5V11M5.5,11H6.5V13H5.5V11Z" />
+        </svg>
+       </div>
+       <h3 class="font-travel text-xl font-semibold text-gray-800 mb-3">Airport Transfers</h3>
+       <p class="font-body text-gray-600 mb-4">Reliable pickup and drop-off services to and from all major airports. Professional drivers ensure you arrive on time.</p><button onclick="openWhatsApp('airport-transfer')" class="text-blue-600 font-medium hover:text-blue-800 transition-colors"> Book Transfer → </button>
+      </div>
+      <div class="service-card p-8 fade-in" style="animation-delay: 0.1s;">
+       <div class="service-icon">
+        <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8Z" />
+        </svg>
+       </div>
+       <h3 class="font-travel text-xl font-semibold text-gray-800 mb-3">Corporate Transportation</h3>
+       <p class="font-body text-gray-600 mb-4">Professional business travel solutions for executives, meetings, and corporate events with premium vehicles.</p><button onclick="openWhatsApp('corporate')" class="text-blue-600 font-medium hover:text-blue-800 transition-colors"> Learn More → </button>
+      </div>
+      <div class="service-card p-8 fade-in" style="animation-delay: 0.2s;">
+       <div class="service-icon">
+        <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M12,2L13.09,8.26L22,9L13.09,9.74L12,16L10.91,9.74L2,9L10.91,8.26L12,2M6.5,12.5L7.5,16.5L11.5,17.5L7.5,18.5L6.5,22.5L5.5,18.5L1.5,17.5L5.5,16.5L6.5,12.5M17.5,12.5L18.5,16.5L22.5,17.5L18.5,18.5L17.5,22.5L16.5,18.5L12.5,17.5L16.5,16.5L17.5,12.5Z" />
+        </svg>
+       </div>
+       <h3 class="font-travel text-xl font-semibold text-gray-800 mb-3">Event Shuttles</h3>
+       <p class="font-body text-gray-600 mb-4">Seamless transportation for weddings, conferences, and special events. Group bookings available.</p><button onclick="openWhatsApp('events')" class="text-blue-600 font-medium hover:text-blue-800 transition-colors"> Get Quote → </button>
+      </div>
+      <div class="service-card p-8 fade-in" style="animation-delay: 0.3s;">
+       <div class="service-icon">
+        <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,13 12,19.5 12,19.5C12,19.5 17,13 17,9A5,5 0 0,0 12,4Z" />
+        </svg>
+       </div>
+       <h3 class="font-travel text-xl font-semibold text-gray-800 mb-3">Tour Packages</h3>
+       <p class="font-body text-gray-600 mb-4">Explore Gauteng and surrounding areas with our guided tour packages and sightseeing excursions.</p><button onclick="openWhatsApp('tours')" class="text-blue-600 font-medium hover:text-blue-800 transition-colors"> View Tours → </button>
+      </div>
+      <div class="service-card p-8 fade-in" style="animation-delay: 0.4s;">
+       <div class="service-icon">
+        <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" />
+        </svg>
+       </div>
+       <h3 class="font-travel text-xl font-semibold text-gray-800 mb-3">24/7 Service</h3>
+       <p class="font-body text-gray-600 mb-4">Round-the-clock availability for emergency transportation, late-night pickups, and urgent travel needs.</p><button onclick="openWhatsApp('emergency')" class="text-blue-600 font-medium hover:text-blue-800 transition-colors"> Call Now → </button>
+      </div>
+      <div class="service-card p-8 fade-in" style="animation-delay: 0.5s;">
+       <div class="service-icon">
+        <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19M16.5,16A1.5,1.5 0 0,1 15,14.5A1.5,1.5 0 0,1 16.5,13A1.5,1.5 0 0,1 18,14.5A1.5,1.5 0 0,1 16.5,16M7.5,16A1.5,1.5 0 0,1 6,14.5A1.5,1.5 0 0,1 7.5,13A1.5,1.5 0 0,1 9,14.5A1.5,1.5 0 0,1 7.5,16M16.5,10A1.5,1.5 0 0,1 15,8.5A1.5,1.5 0 0,1 16.5,7A1.5,1.5 0 0,1 18,8.5A1.5,1.5 0 0,1 16.5,10M7.5,10A1.5,1.5 0 0,1 6,8.5A1.5,1.5 0 0,1 7.5,7A1.5,1.5 0 0,1 9,8.5A1.5,1.5 0 0,1 7.5,10Z" />
+        </svg>
+       </div>
+       <h3 class="font-travel text-xl font-semibold text-gray-800 mb-3">Custom Plans</h3>
+       <p class="font-body text-gray-600 mb-4">Tailored transportation solutions for special occasions, multi-day trips, and unique travel requirements.</p><button onclick="openWhatsApp('custom')" class="text-blue-600 font-medium hover:text-blue-800 transition-colors"> Plan Trip → </button>
+      </div>
+     </div>
+    </div>
+   </section>
+   
+
+   <!-- Cross Border Section -->
+<section id="cross-border" 
+         class="relative py-32 bg-center bg-cover" 
+         style="background-image: url('images/bus.jpg');">
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+  <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
+    <h2 class="font-travel text-3xl md:text-5xl font-bold mb-6 fade-in">
+      Cross Border Travel
+    </h2>
+    <p class="font-body text-lg md:text-xl mb-8 fade-in" style="animation-delay:0.2s;">
+      Seamless and secure cross-border transportation across Southern Africa.
+      Whether it’s business, leisure, or family travel, we ensure comfort, 
+      reliability, and professional service every step of the way.
+    </p>
+    <button onclick="openWhatsApp('cross-border')" 
+            class="btn-primary text-lg px-10 py-4">
+      <span>Enquire Now</span>
+    </button>
+  </div>
+</section>
+
+   
+   <section id="about" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16">
+      <h2 id="about-title" class="font-travel text-3xl md:text-4xl font-bold text-gray-800 mb-4 fade-in">Why Choose Us</h2>
+      <p class="font-body text-lg text-gray-600 max-w-3xl mx-auto fade-in">Distinguished Travels and Shuttles is dedicated to providing exceptional transportation services with a focus on safety, reliability, and customer satisfaction.</p>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+      <div class="text-center fade-in">
+       <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C15.4,11.5 16,12.1 16,12.7V16.2C16,16.8 15.4,17.3 14.8,17.3H9.2C8.6,17.3 8,16.8 8,16.2V12.7C8,12.1 8.6,11.5 9.2,11.5V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,10V11.5H13.5V10C13.5,8.7 12.8,8.2 12,8.2Z" />
+        </svg>
+       </div>
+       <h3 class="font-travel text-xl font-semibold text-gray-800 mb-2">Safety First</h3>
+       <p class="font-body text-gray-600 text-sm">All vehicles regularly maintained and drivers professionally trained for your safety</p>
+      </div>
+      <div class="text-center fade-in" style="animation-delay: 0.1s;">
+       <div class="w-16 h-16 bg-gradient-to-br from-yellow-600 to-gray-500 rounded-full flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" />
+        </svg>
+       </div>
+       <h3 class="font-travel text-xl font-semibold text-gray-800 mb-2">Punctuality</h3>
+       <p class="font-body text-gray-600 text-sm">Always on time with real-time tracking and proactive communication</p>
+      </div>
+      <div class="text-center fade-in" style="animation-delay: 0.2s;">
+       <div class="w-16 h-16 bg-gradient-to-br from-gray-500 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+        </svg>
+       </div>
+       <h3 class="font-travel text-xl font-semibold text-gray-800 mb-2">5-Star Service</h3>
+       <p class="font-body text-gray-600 text-sm">Exceptional customer service with personalized attention to detail</p>
+      </div>
+      <div class="text-center fade-in" style="animation-delay: 0.3s;">
+       <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-gray-600 rounded-full flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
+        </svg>
+       </div>
+       <h3 class="font-travel text-xl font-semibold text-gray-800 mb-2">24/7 Support</h3>
+       <p class="font-body text-gray-600 text-sm">Round-the-clock customer support for all your transportation needs</p>
+      </div>
+     </div><!-- Testimonials -->
+     <div class="grid md:grid-cols-2 gap-8">
+      <div class="testimonial-card fade-in">
+       <div class="flex items-center mb-4">
+        <div class="w-12 h-12 bg-gradient-to-br from-blue-700 to-sky-500 rounded-full flex items-center justify-center mr-4"><span class="text-white font-bold">SM</span>
+        </div>
+        <div>
+         <h4 class="font-travel font-semibold text-gray-800">Sarah Mitchell</h4>
+         <p class="text-sm text-gray-600">Corporate Executive</p>
+        </div>
+       </div>
+       <p class="font-body text-gray-700 italic mb-4">"Exceptional service! The driver was professional, the vehicle was immaculate, and they were right on time for my important business meeting. Highly recommended!"</p>
+       <div class="flex text-yellow-400">
+        <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+         <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+        </svg>
+        <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+         <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+        </svg>
+        <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+         <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+        </svg>
+        <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+         <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+        </svg>
+        <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+         <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+        </svg>
+       </div>
+      </div>
+      <div class="testimonial-card fade-in" style="animation-delay: 0.2s;">
+       <div class="flex items-center mb-4">
+        <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-orange-500 rounded-full flex items-center justify-center mr-4"><span class="text-white font-bold">MD</span>
+        </div>
+        <div>
+         <h4 class="font-travel font-semibold text-gray-800">Maluleke David</h4>
+         <p class="text-sm text-gray-600">Event Coordinator</p>
+        </div>
+       </div>
+       <p class="font-body text-gray-700 italic mb-4">"Distinguished Travels handled transportation for our corporate event flawlessly. Multiple pickups, perfect timing, and excellent communication throughout. Will definitely use again!"</p>
+       <div class="flex text-yellow-400">
+        <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+         <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+        </svg>
+        <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+         <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+        </svg>
+        <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+         <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+        </svg>
+        <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+         <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+        </svg>
+        <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+         <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+        </svg>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Fleet Section -->
+   
+<section id="fleet" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="font-travel text-3xl md:text-4xl font-bold text-gray-800 mb-4 fade-in">Our Fleet</h2>
+      <p class="font-body text-lg text-gray-600 max-w-2xl mx-auto fade-in">
+        A premium selection of vehicles for business, leisure, and group travel.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- V-Class -->
+      <div class="fleet-card fade-in">
+        <div class="h-48 overflow-hidden">
+          <img src="images/vc.jpg" 
+               alt="Mercedes-Benz V-Class 8-seater" 
+               class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h3 class="font-travel text-xl font-semibold text-gray-800 mb-2">Mercedes-Benz V-Class</h3>
+          <p class="font-body text-gray-600 text-sm mb-4">Luxury 8-seater van ideal for group or executive travel.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• Up to 8 passengers</li>
+            <li>• Leather interior</li>
+            <li>• Climate control</li>
+            <li>• USB & WiFi connectivity</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hyundai H-1 -->
+      <div class="fleet-card fade-in" style="animation-delay: 0.1s;">
+        <div class="h-48 overflow-hidden">
+          <img src="images/h1.jpg" 
+               alt="Hyundai H-1 Van" 
+               class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h3 class="font-travel text-xl font-semibold text-gray-800 mb-2">Hyundai H-1 Van</h3>
+          <p class="font-body text-gray-600 text-sm mb-4">Spacious and comfortable van perfect for family or shuttle transport.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• 7–9 passengers</li>
+            <li>• Ample luggage space</li>
+            <li>• Air conditioning</li>
+            <li>• Smooth ride</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- GLA -->
+      <div class="fleet-card fade-in" style="animation-delay: 0.2s;">
+        <div class="h-48 overflow-hidden">
+          <img src="images/gla.jpg" 
+               alt="Mercedes-Benz GLA" 
+               class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h3 class="font-travel text-xl font-semibold text-gray-800 mb-2">Mercedes-Benz GLA</h3>
+          <p class="font-body text-gray-600 text-sm mb-4">Compact luxury SUV with style, agility, and comfort.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• 4 passengers</li>
+            <li>• Premium leather seats</li>
+            <li>• Advanced safety features</li>
+            <li>• WiFi & Bluetooth</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- C-Class -->
+      <div class="fleet-card fade-in" style="animation-delay: 0.3s;">
+        <div class="h-48 overflow-hidden">
+          <img src="images/clas.jpg" 
+               alt="Mercedes-Benz C-Class" 
+               class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h3 class="font-travel text-xl font-semibold text-gray-800 mb-2">Mercedes-Benz C-Class</h3>
+          <p class="font-body text-gray-600 text-sm mb-4">Elegant sedan for executive and private transfers.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• 4 passengers</li>
+            <li>• Leather interior</li>
+            <li>• Dual-zone climate control</li>
+            <li>• USB & WiFi available</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- BMW G20 -->
+      <div class="fleet-card fade-in" style="animation-delay: 0.4s;">
+        <div class="h-48 overflow-hidden">
+          <img src="images/bmw.jpg" 
+               alt="BMW G20" 
+               class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h3 class="font-travel text-xl font-semibold text-gray-800 mb-2">BMW G20</h3>
+          <p class="font-body text-gray-600 text-sm mb-4">Sporty and refined sedan with powerful performance.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• 4 passengers</li>
+            <li>• Luxury leather interior</li>
+            <li>• Advanced infotainment</li>
+            <li>• Climate control</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- VW Kombi -->
+<div class="fleet-card fade-in" style="animation-delay: 0.5s;">
+  <div class="h-48 overflow-hidden">
+    <img src="images/kombi.jpg" 
+         alt="VW Kombi" 
+         class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+  </div>
+  <div class="p-6">
+    <h3 class="font-travel text-xl font-semibold text-gray-800 mb-2">VW Kombi</h3>
+    <p class="font-body text-gray-600 text-sm mb-4">Reliable and spacious van ideal for family and business transfers.</p>
+    <ul class="text-sm text-gray-500 space-y-1">
+      <li>• Up to 8 passengers</li>
+      <li>• Comfortable seating</li>
+      <li>• Air conditioning</li>
+      <li>• Luggage space available</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Mercedes Vito -->
+<div class="fleet-card fade-in" style="animation-delay: 0.6s;">
+  <div class="h-48 overflow-hidden">
+    <img src="images/vitos.jpg" 
+         alt="Mercedes-Benz Vito" 
+         class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+  </div>
+  <div class="p-6">
+    <h3 class="font-travel text-xl font-semibold text-gray-800 mb-2">Mercedes-Benz Vito</h3>
+    <p class="font-body text-gray-600 text-sm mb-4">Versatile van with premium comfort for group and airport transfers.</p>
+    <ul class="text-sm text-gray-500 space-y-1">
+      <li>• 8–9 passengers</li>
+      <li>• Leather interior</li>
+      <li>• Dual-zone climate control</li>
+      <li>• WiFi & USB ports</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 15-Seater Mini Bus -->
+<div class="fleet-card fade-in" style="animation-delay: 0.7s;">
+  <div class="h-48 overflow-hidden">
+    <img src="images/toya.jpg" 
+         alt="15-Seater Mini Bus" 
+         class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+  </div>
+  <div class="p-6">
+    <h3 class="font-travel text-xl font-semibold text-gray-800 mb-2">15-Seater Mini Bus</h3>
+    <p class="font-body text-gray-600 text-sm mb-4">Ideal for group tours, events, or shuttle services.</p>
+    <ul class="text-sm text-gray-500 space-y-1">
+      <li>• Up to 15 passengers</li>
+      <li>• Spacious and air-conditioned</li>
+      <li>• Comfortable high-back seats</li>
+      <li>• Luggage storage available</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 32-Seater Luxury Coach -->
+<div class="fleet-card fade-in" style="animation-delay: 0.8s;">
+  <div class="h-48 overflow-hidden">
+    <img src="images/bus.jpg" 
+         alt="32-Seater Luxury Coach" 
+         class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+  </div>
+  <div class="p-6">
+    <h3 class="font-travel text-xl font-semibold text-gray-800 mb-2">32-Seater Luxury Coach</h3>
+    <p class="font-body text-gray-600 text-sm mb-4">Perfect for corporate trips, long-distance travel, and large group tours.</p>
+    <ul class="text-sm text-gray-500 space-y-1">
+      <li>• 32 passengers</li>
+      <li>• Reclining seats & onboard entertainment</li>
+      <li>• Air conditioning & WiFi</li>
+      <li>• Luggage compartments</li>
+    </ul>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+
+   <section id="contact" class="py-20" style="background: linear-gradient(135deg, var(--luxury-navy) 0%, var(--luxury-charcoal) 50%, var(--luxury-dark-gold) 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16">
+      <h2 id="contact-title" class="font-travel text-3xl md:text-4xl font-bold text-white mb-4 fade-in">Book Your Journey</h2>
+      <p class="font-body text-lg text-white opacity-90 max-w-2xl mx-auto fade-in">Ready to travel with us? Get in touch for bookings, quotes, or any questions about our services.</p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="text-white fade-in">
+       <div class="space-y-6">
+        <div class="flex items-center space-x-4">
+         <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
+          </svg>
+         </div>
+         <div>
+          <h4 class="font-travel font-semibold text-lg">Phone</h4>
+          <p class="font-body">+27 65 979 5627</p>
+         </div>
+        </div>
+        <div class="flex items-center space-x-4">
+         <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
+          </svg>
+         </div>
+         <div>
+          <h4 class="font-travel font-semibold text-lg">Email</h4>
+          <p class="font-body">travel@distinguishedd.co.za</p>
+         </div>
+        </div>
+        <div class="flex items-center space-x-4">
+         <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" />
+          </svg>
+         </div>
+         <div>
+          <h4 class="font-travel font-semibold text-lg">Location</h4>
+          <p class="font-body">Pretoria, Gauteng</p>
+         </div>
+        </div>
+        <div class="flex items-center space-x-4">
+         <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" />
+          </svg>
+         </div>
+         <div>
+          <h4 class="font-travel font-semibold text-lg">Hours</h4>
+          <p class="font-body">24/7 Service Available</p>
+         </div>
+        </div>
+       </div>
+       <div class="mt-8"><button onclick="openWhatsApp('booking')" class="btn-primary bg-white text-blue-700 hover:bg-gray-100 text-lg px-8 py-4"> <span class="flex items-center space-x-2">
+          <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472,14.382C17.367,14.382 17.264,14.382 17.157,14.382C16.909,14.382 16.67,14.316 16.447,14.215C15.989,14.006 15.572,13.718 15.207,13.366C14.842,13.014 14.554,12.596 14.345,12.138C14.244,11.915 14.178,11.676 14.178,11.428C14.178,11.321 14.178,11.218 14.178,11.113C14.178,10.865 14.244,10.626 14.345,10.403C14.554,9.945 14.842,9.527 15.207,9.175C15.572,8.823 15.989,8.535 16.447,8.326C16.67,8.225 16.909,8.159 17.157,8.159C17.264,8.159 17.367,8.159 17.472,8.159C17.72,8.159 17.959,8.225 18.182,8.326C18.64,8.535 19.058,8.823 19.41,9.175C19.762,9.527 20.05,9.945 20.259,10.403C20.36,10.626 20.426,10.865 20.426,11.113C20.426,11.218 20.426,11.321 20.426,11.428C20.426,11.676 20.36,11.915 20.259,12.138C20.05,12.596 19.762,13.014 19.41,13.366C19.058,13.718 18.64,14.006 18.182,14.215C17.959,14.316 17.72,14.382 17.472,14.382Z" />
+          </svg><span>WhatsApp Booking</span> </span> </button>
+       </div>
+      </div>
+      <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-2xl p-8 fade-in">
+       <h3 class="font-travel text-2xl font-bold text-white mb-6">Quick Quote</h3>
+       <form onsubmit="handleQuoteForm(event)" class="space-y-4">
+        <div class="grid md:grid-cols-2 gap-4"><input type="text" placeholder="Your Name" class="form-input bg-white bg-opacity-20 text-white placeholder-white placeholder-opacity-70" required> <input type="tel" placeholder="Phone Number" class="form-input bg-white bg-opacity-20 text-white placeholder-white placeholder-opacity-70" required>
+        </div><input type="email" placeholder="Email Address" class="form-input bg-white bg-opacity-20 text-white placeholder-white placeholder-opacity-70" required>
+        <div class="grid md:grid-cols-2 gap-4"><input type="text" placeholder="Pickup Location" class="form-input bg-white bg-opacity-20 text-white placeholder-white placeholder-opacity-70" required> <input type="text" placeholder="Destination" class="form-input bg-white bg-opacity-20 text-white placeholder-white placeholder-opacity-70" required>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4"><input type="date" class="form-input bg-white bg-opacity-20 text-white" required> <input type="time" class="form-input bg-white bg-opacity-20 text-white" required>
+        </div><select class="form-input bg-white bg-opacity-20 text-white" required> <option value="">Select Service</option> <option value="airport">Airport Transfer</option> <option value="corporate">Corporate Transport</option> <option value="events">Event Shuttle</option> <option value="tours">Tour Package</option> <option value="custom">Custom Plan</option> </select> <textarea placeholder="Additional Details" rows="3" class="form-input bg-white bg-opacity-20 text-white placeholder-white placeholder-opacity-70"></textarea> <button type="submit" class="w-full btn-primary bg-white text-blue-700 hover:bg-gray-100 py-3"> <span id="quote-btn-text">Get Quote</span>
+         <div id="quote-loading" class="loading-spinner mx-auto hidden"></div></button>
+       </form>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="bg-gray-800 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-5 gap-8">
+      <!-- Logo & Description -->
+      <div>
+        <div class="flex items-center space-x-2 mb-4">
+          <div class="w-8 h-8 bg-gradient-to-br from-blue-700 to-sky-500 rounded-lg flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.92,6.01C18.72,5.42 18.16,5 17.5,5H15V4A2,2 0 0,0 13,2H11A2,2 0 0,0 9,4V5H6.5C5.84,5 5.28,5.42 5.08,6.01L3,12V20A1,1 0 0,0 4,21H5A1,1 0 0,0 6,20V19H18V20A1,1 0 0,0 19,21H20A1,1 0 0,0 21,20V12L18.92,6.01M6.5,7H17.5L19,11H5L6.5,7M11,4H13V5H11V4M7.5,16A1.5,1.5 0 0,1 6,14.5A1.5,1.5 0 0,1 7.5,13A1.5,1.5 0 0,1 9,14.5A1.5,1.5 0 0,1 7.5,16M16.5,16A1.5,1.5 0 0,1 15,14.5A1.5,1.5 0 0,1 16.5,13A1.5,1.5 0 0,1 18,14.5A1.5,1.5 0 0,1 16.5,16Z" />
+            </svg>
+          </div>
+          <span class="font-travel font-bold">Distinguished Travels</span>
+        </div>
+        <p class="font-body text-gray-300 text-sm">
+          Your trusted travel partner for safe, reliable, and comfortable transportation solutions.
+        </p>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h4 class="font-travel font-semibold mb-4">Services</h4>
+        <ul class="font-body text-sm text-gray-300 space-y-2">
+          <li><button onclick="openWhatsApp('airport-transfer')" class="hover:text-white transition-colors">Airport Transfers</button></li>
+          <li><button onclick="openWhatsApp('corporate')" class="hover:text-white transition-colors">Corporate Transport</button></li>
+          <li><button onclick="openWhatsApp('events')" class="hover:text-white transition-colors">Event Shuttles</button></li>
+          <li><button onclick="openWhatsApp('tours')" class="hover:text-white transition-colors">Tour Packages</button></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="font-travel font-semibold mb-4">Contact</h4>
+        <ul class="font-body text-sm text-gray-300 space-y-2">
+          <li>+27 65 979 5627</li>
+          <li>travel@distinguishedd.co.za</li>
+          <li>Pretoria, Gauteng</li>
+          <li>24/7 Service Available</li>
+        </ul>
+      </div>
+
+      <!-- Follow Us -->
+      <div>
+        <h4 class="font-travel font-semibold mb-4">Follow Us</h4>
+        <div class="flex space-x-3">
+          <a href="https://www.facebook.com/MrAmazingTheStylist/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24,12.073C24,5.405 18.627,0 12,0S0,5.405 0,12.073C0,18.1 4.388,23.094 10.125,24V15.563H7.078V12.073H10.125V9.404C10.125,6.369 11.917,4.715 14.658,4.715C15.97,4.715 17.344,4.953 17.344,4.953V7.928H15.83C14.34,7.928 13.875,8.84 13.875,9.775V12.073H17.203L16.671,15.563H13.875V24C19.612,23.094 24,18.1 24,12.073Z" /></svg>
+          </a>
+          <a href="https://www.instagram.com/distinquished_by_mr_amazing/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-pink-600 transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg>
+          </a>
+          <a href="https://x.com/MrAmazingstylis" target="_blank" rel="noopener noreferrer" class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-blue-400 transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" /></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Our Brands -->
+      <div>
+        <h4 class="font-travel font-semibold mb-4">Our Brands</h4>
+        <ul class="font-body text-sm text-gray-300 space-y-2">
+          <li><a href="clothing.html" class="hover:text-white transition-colors">Distinguished Fashion</a></li>
+          <li><a href="training.html" class="hover:text-white transition-colors">Distinguished Training</a></li>
+          <li><a href="uniform.html" class="hover:text-white transition-colors">Corporate Uniforms</a></li>
+          <li><a href="wines.html" class="hover:text-white transition-colors">Distinguished Wines</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+      <p class="font-body text-sm text-gray-400">© 2024 Distinguished Travels and Shuttles. All rights reserved. | Pretoria, Gauteng</p>
+    </div>
+  </div>
+</footer>
+
+  </div><!-- Floating WhatsApp Button -->
+  
+  <script>
+        // Default luxury configuration
+        const defaultConfig = {
+            company_name: "Distinguished Travels and Shuttles",
+            main_tagline: "Your trusted travel partner",
+            hero_subtitle: "Safe, reliable, and comfortable transportation solutions for all your travel needs",
+            services_title: "Our Services",
+            about_title: "Why Choose Us",
+            contact_title: "Book Your Journey",
+            primary_color: "#1a2332",
+            secondary_color: "#2d3748", 
+            accent_color: "#d4af37",
+            surface_color: "#fefcf7",
+            text_color: "#1a2332",
+            font_family: "Poppins, sans-serif",
+            font_size: 16
+        };
+
+        // Hero Slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const indicators = document.querySelectorAll('.slide-indicator');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            // Remove active class from all slides and indicators
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Add active class to current slide and indicator
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            
+            if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            } else if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            }
+            
+            showSlide(currentSlide);
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            showSlide(currentSlide);
+        }
+
+        // Auto-advance slides every 5 seconds
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+
+        // Smooth scrolling
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // WhatsApp integration
+        function openWhatsApp(type) {
+            const phoneNumber = '27659795627';
+            let message = '';
+            
+            switch(type) {
+                case 'airport-transfer':
+                    message = 'Hello! I would like to book an airport transfer. Could you please provide me with rates and availability?';
+                    break;
+                case 'corporate':
+                    message = 'Hello! I am interested in your corporate transportation services. Could you share information about business travel solutions?';
+                    break;
+                case 'events':
+                    message = 'Hello! I need shuttle services for an event. Could you provide details about group transportation and pricing?';
+                    break;
+                case 'tours':
+                    message = 'Hello! I would like to inquire about your tour packages. What sightseeing options do you offer in Gauteng?';
+                    break;
+                case 'emergency':
+                    message = 'Hello! I need urgent transportation assistance. Are you available for immediate pickup?';
+                    break;
+                case 'custom':
+                    message = 'Hello! I need a customized transportation plan. Could you help me create a tailored travel solution?';
+                    break;
+                case 'booking':
+                    message = 'Hello! I would like to book transportation with Distinguished Travels. Could you please assist me with availability and rates?';
+                    break;
+                default:
+                    message = 'Hello! I would like to learn more about Distinguished Travels and Shuttles services.';
+            }
+            
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        }
+
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileOverlay = document.getElementById('mobile-overlay');
+            
+            if (mobileMenu && mobileOverlay) {
+                const isOpen = mobileMenu.classList.contains('translate-x-0');
+                
+                if (isOpen) {
+                    mobileMenu.classList.remove('translate-x-0');
+                    mobileMenu.classList.add('translate-x-full');
+                    mobileOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+                    mobileOverlay.classList.add('opacity-0', 'pointer-events-none');
+                    document.body.style.overflow = '';
+                } else {
+                    mobileMenu.classList.remove('translate-x-full');
+                    mobileMenu.classList.add('translate-x-0');
+                    mobileOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                    mobileOverlay.classList.add('opacity-100', 'pointer-events-auto');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+        }
+
+        // Quote form handler
+        function handleQuoteForm(event) {
+            event.preventDefault();
+            
+            const btnText = document.getElementById('quote-btn-text');
+            const loading = document.getElementById('quote-loading');
+            
+            // Show loading state
+            btnText.style.display = 'none';
+            loading.classList.remove('hidden');
+            
+            // Simulate form processing
+            setTimeout(() => {
+                // Hide loading state
+                btnText.style.display = 'inline';
+                loading.classList.add('hidden');
+                
+                // Get form data
+                const formData = new FormData(event.target);
+                const name = formData.get('name') || 'Customer';
+                
+                // Create WhatsApp message with form data
+                const message = `Hello! I would like to request a quote for transportation services.
+
+Name: ${event.target[0].value}
+Phone: ${event.target[1].value}
+Email: ${event.target[2].value}
+Pickup: ${event.target[3].value}
+Destination: ${event.target[4].value}
+Date: ${event.target[5].value}
+Time: ${event.target[6].value}
+Service: ${event.target[7].value}
+Details: ${event.target[8].value}
+
+Please provide me with a quote and availability. Thank you!`;
+                
+                const phoneNumber = '27659795627';
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+                
+                // Reset form
+                event.target.reset();
+            }, 1500);
+        }
+
+        // Element SDK configuration
+        async function onConfigChange(config) {
+            // Update text content
+            const companyName = document.getElementById('company-name');
+            if (companyName) companyName.textContent = config.company_name || defaultConfig.company_name;
+            
+            const mainTagline = document.getElementById('main-tagline');
+            if (mainTagline) mainTagline.textContent = config.main_tagline || defaultConfig.main_tagline;
+            
+            const heroSubtitle = document.getElementById('hero-subtitle');
+            if (heroSubtitle) heroSubtitle.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+            
+            const servicesTitle = document.getElementById('services-title');
+            if (servicesTitle) servicesTitle.textContent = config.services_title || defaultConfig.services_title;
+            
+            const aboutTitle = document.getElementById('about-title');
+            if (aboutTitle) aboutTitle.textContent = config.about_title || defaultConfig.about_title;
+            
+            const contactTitle = document.getElementById('contact-title');
+            if (contactTitle) contactTitle.textContent = config.contact_title || defaultConfig.contact_title;
+
+            // Apply colors
+            const primaryColor = config.primary_color || defaultConfig.primary_color;
+            const secondaryColor = config.secondary_color || defaultConfig.secondary_color;
+            const accentColor = config.accent_color || defaultConfig.accent_color;
+            const surfaceColor = config.surface_color || defaultConfig.surface_color;
+            const textColor = config.text_color || defaultConfig.text_color;
+
+            // Update CSS custom properties
+            document.documentElement.style.setProperty('--travel-blue', primaryColor);
+            document.documentElement.style.setProperty('--travel-sky', secondaryColor);
+            document.documentElement.style.setProperty('--travel-green', accentColor);
+            document.documentElement.style.setProperty('--travel-white', surfaceColor);
+            document.documentElement.style.setProperty('--travel-gray', textColor);
+
+            // Apply font family
+            const customFont = config.font_family || defaultConfig.font_family;
+            document.querySelectorAll('.font-travel').forEach(el => {
+                el.style.fontFamily = customFont;
+            });
+
+            // Apply font sizing
+            const baseSize = config.font_size || defaultConfig.font_size;
+            document.documentElement.style.fontSize = `${baseSize}px`;
+        }
+
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [
+                    {
+                        get: () => config.primary_color || defaultConfig.primary_color,
+                        set: (value) => {
+                            config.primary_color = value;
+                            window.elementSdk.setConfig({ primary_color: value });
+                        }
+                    },
+                    {
+                        get: () => config.secondary_color || defaultConfig.secondary_color,
+                        set: (value) => {
+                            config.secondary_color = value;
+                            window.elementSdk.setConfig({ secondary_color: value });
+                        }
+                    },
+                    {
+                        get: () => config.accent_color || defaultConfig.accent_color,
+                        set: (value) => {
+                            config.accent_color = value;
+                            window.elementSdk.setConfig({ accent_color: value });
+                        }
+                    },
+                    {
+                        get: () => config.surface_color || defaultConfig.surface_color,
+                        set: (value) => {
+                            config.surface_color = value;
+                            window.elementSdk.setConfig({ surface_color: value });
+                        }
+                    },
+                    {
+                        get: () => config.text_color || defaultConfig.text_color,
+                        set: (value) => {
+                            config.text_color = value;
+                            window.elementSdk.setConfig({ text_color: value });
+                        }
+                    }
+                ],
+                borderables: [],
+                fontEditable: {
+                    get: () => config.font_family || defaultConfig.font_family,
+                    set: (value) => {
+                        config.font_family = value;
+                        window.elementSdk.setConfig({ font_family: value });
+                    }
+                },
+                fontSizeable: {
+                    get: () => config.font_size || defaultConfig.font_size,
+                    set: (value) => {
+                        config.font_size = value;
+                        window.elementSdk.setConfig({ font_size: value });
+                    }
+                }
+            };
+        }
+
+        function mapToEditPanelValues(config) {
+            return new Map([
+                ["company_name", config.company_name || defaultConfig.company_name],
+                ["main_tagline", config.main_tagline || defaultConfig.main_tagline],
+                ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+                ["services_title", config.services_title || defaultConfig.services_title],
+                ["about_title", config.about_title || defaultConfig.about_title],
+                ["contact_title", config.contact_title || defaultConfig.contact_title]
+            ]);
+        }
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Element SDK
+            if (window.elementSdk) {
+                window.elementSdk.init({
+                    defaultConfig,
+                    onConfigChange,
+                    mapToCapabilities,
+                    mapToEditPanelValues
+                });
+            }
+        });
+
+        // Close mobile menu on window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                const mobileMenu = document.getElementById('mobile-menu');
+                const mobileOverlay = document.getElementById('mobile-overlay');
+                
+                if (mobileMenu && mobileOverlay) {
+                    mobileMenu.classList.remove('translate-x-0');
+                    mobileMenu.classList.add('translate-x-full');
+                    mobileOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+                    mobileOverlay.classList.add('opacity-0', 'pointer-events-none');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+    </script>
+ </body>
+</html>
