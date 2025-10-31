@@ -464,7 +464,7 @@
   <img src="images/logo.png" alt="Distinguished Logo" width="700" height="212" style="max-width:180px; height:auto;">
 </a>
 
-     <nav class="hidden md:flex items-center space-x-8"><button onclick="scrollToSection('hero')" class="nav-link text-gold hover:text-gold-light transition-colors font-modern text-sm font-medium">Home</button> <button onclick="scrollToSection('services')" class="nav-link text-gold hover:text-gold-light transition-colors font-modern text-sm font-medium">Services</button> <button onclick="scrollToSection('gallery')" class="nav-link text-gold hover:text-gold-light transition-colors font-modern text-sm font-medium">Gallery</button> <button onclick="scrollToSection('testimonials')" class="nav-link text-gold hover:text-gold-light transition-colors font-modern text-sm font-medium">Testimonials</button> <button onclick="scrollToSection('contact')" class="nav-link text-gold hover:text-gold-light transition-colors font-modern text-sm font-medium">Contact</button> <button onclick="openWhatsApp('consultation')" class="btn-atelier rounded-full px-4 py-2 text-xs"> <span>Book Consultation</span> </button>
+     <nav class="hidden md:flex items-center space-x-8"><a href="index.html" class="nav-link text-gold hover:text-gold-light transition-colors font-modern text-sm font-medium">Home</a> <button onclick="scrollToSection('services')" class="nav-link text-gold hover:text-gold-light transition-colors font-modern text-sm font-medium">Services</button> <button onclick="scrollToSection('gallery')" class="nav-link text-gold hover:text-gold-light transition-colors font-modern text-sm font-medium">Gallery</button> <button onclick="scrollToSection('testimonials')" class="nav-link text-gold hover:text-gold-light transition-colors font-modern text-sm font-medium">Testimonials</button> <button onclick="scrollToSection('contact')" class="nav-link text-gold hover:text-gold-light transition-colors font-modern text-sm font-medium">Contact</button> <button onclick="openWhatsApp('consultation')" class="btn-atelier rounded-full px-4 py-2 text-xs"> <span>Book Consultation</span> </button>
      </nav><!-- Mobile Menu Button -->
      <div class="md:hidden"><button onclick="toggleMobileMenu()" class="mobile-menu-btn text-gold hover:text-gold-light transition-colors">
        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -483,11 +483,15 @@
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg></button>
     </div><!-- Mobile Menu Items -->
-    <nav class="flex-1 px-4 py-6 space-y-4"><button onclick="scrollToSection('hero'); toggleMobileMenu();" class="mobile-nav-item w-full text-left py-3 px-4 text-gold hover:text-gold-light hover:bg-gold hover:bg-opacity-10 rounded-lg transition-all font-modern">
-      <div class="flex items-center space-x-3">
-       <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
-       </svg><span>Home</span>
-      </div></button> <button onclick="scrollToSection('services'); toggleMobileMenu();" class="mobile-nav-item w-full text-left py-3 px-4 text-gold hover:text-gold-light hover:bg-gold hover:bg-opacity-10 rounded-lg transition-all font-modern">
+    <nav class="flex-1 px-4 py-6 space-y-4"><a href="index.html" class="mobile-nav-item w-full text-left py-3 px-4 text-gold hover:text-gold-light hover:bg-gold hover:bg-opacity-10 rounded-lg transition-all font-modern inline-block">
+  <div class="flex items-center space-x-3">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+    </svg>
+    <span>Home</span>
+  </div>
+</a>
+ <button onclick="scrollToSection('services'); toggleMobileMenu();" class="mobile-nav-item w-full text-left py-3 px-4 text-gold hover:text-gold-light hover:bg-gold hover:bg-opacity-10 rounded-lg transition-all font-modern">
       <div class="flex items-center space-x-3">
        <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2M19,11C19,14.53 16.39,17.44 13,17.93V21H11V17.93C7.61,17.44 5,14.53 5,11H7A5,5 0 0,0 12,16A5,5 0 0,0 17,11H19Z" />
        </svg><span>Services</span>
@@ -921,9 +925,9 @@
         <div class="stitch-border rounded-2xl p-8 bg-black bg-opacity-50">
          <h3 class="font-fashion text-2xl text-gold-light mb-6">Atelier Hours</h3>
          <div class="space-y-3 font-modern text-sm text-pearl">
-          <div class="flex justify-between"><span>Monday - Friday</span> <span>9:00 AM - 6:00 PM</span>
+          <div class="flex justify-between"><span>Monday - Friday</span> <span>By Appointment</span>
           </div>
-          <div class="flex justify-between"><span>Saturday</span> <span>10:00 AM - 4:00 PM</span>
+          <div class="flex justify-between"><span>Saturday</span> <span>By Appointment</span>
           </div>
           <div class="flex justify-between"><span>Sunday</span> <span>By Appointment</span>
           </div>
@@ -960,7 +964,7 @@
         <h4 class="font-fashion text-lg font-semibold text-gold-light mb-4">Our Brands</h4>
         <ul class="space-y-3">
           <li>
-            <a href="index.html" class="font-modern text-gold-muted hover:text-gold-light transition-colors duration-300">Distinguished Holdings</a>
+            <a href="wines.html" class="font-modern text-gold-muted hover:text-gold-light transition-colors duration-300">Distinguished Wines</a>
           </li>
           <li>
             <a href="uniform.html" class="font-modern text-gold-muted hover:text-gold-light transition-colors duration-300">Distinguished Training</a>
@@ -1014,10 +1018,11 @@
 
     <!-- Bottom bar -->
     <div class="mt-12 pt-6 border-t border-gold border-opacity-20 text-center">
-      <p class="font-modern text-xs text-pearl opacity-60">
-        © <span id="year"></span> Distinguished Holdings. All rights reserved. Crafting Excellence Since 2020.
-      </p>
-    </div>
+  <p class="font-modern text-xs text-pearl opacity-60">
+    © <span id="year"></span> Distinguished Holdings. All rights reserved. Crafting Excellence Since 2020. | Website By <a href="https://www.valoyitech.co.za/" class="hover:text-gold-light transition-colors">ValoyItech</a>
+  </p>
+</div>
+
   </div>
 </footer>
 

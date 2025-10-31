@@ -543,7 +543,7 @@
        </div>
       </div>
      </div><!-- Desktop Navigation -->
-     <nav class="hidden md:flex items-center space-x-8"><button onclick="scrollToSection('hero')" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Home</button> <button onclick="scrollToSection('services')" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Services</button> <button onclick="scrollToSection('about')" class="nav-link text-gray-700 hover:text-blue-700 font-medium">About</button> <button onclick="scrollToSection('fleet')" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Fleet</button> <button onclick="scrollToSection('contact')" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Contact</button> <button onclick="openWhatsApp('booking')" class="btn-primary rounded-full px-6 py-2"> <span>Book Now</span> </button>
+     <nav class="hidden md:flex items-center space-x-8"><a href="index.html" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Home</a> <button onclick="scrollToSection('services')" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Services</button> <button onclick="scrollToSection('about')" class="nav-link text-gray-700 hover:text-blue-700 font-medium">About</button> <button onclick="scrollToSection('fleet')" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Fleet</button> <button onclick="scrollToSection('contact')" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Contact</button> <button onclick="openWhatsApp('booking')" class="btn-primary rounded-full px-6 py-2"> <span>Book Now</span> </button>
      </nav><!-- Mobile Menu Button -->
      <div class="md:hidden"><button onclick="toggleMobileMenu()" class="text-gray-700 hover:text-blue-700">
        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -568,10 +568,12 @@
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg></button>
     </div>
-    <nav class="flex-1 px-6 py-8 space-y-2"><button onclick="scrollToSection('hero'); toggleMobileMenu();" class="w-full text-left py-4 px-4 text-slate-300 hover:bg-slate-700 hover:text-white rounded-xl transition-all flex items-center space-x-3">
-      <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
-       <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
-      </svg><span>Home</span> </button> <button onclick="scrollToSection('services'); toggleMobileMenu();" class="w-full text-left py-4 px-4 text-slate-300 hover:bg-slate-700 hover:text-white rounded-xl transition-all flex items-center space-x-3">
+    <nav class="flex-1 px-6 py-8 space-y-2"><a href="index.html" class="w-full text-left py-4 px-4 text-slate-300 hover:bg-slate-700 hover:text-white rounded-xl transition-all flex items-center space-x-3">
+  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+  </svg>
+  <span>Home</span>
+</a> <button onclick="scrollToSection('services'); toggleMobileMenu();" class="w-full text-left py-4 px-4 text-slate-300 hover:bg-slate-700 hover:text-white rounded-xl transition-all flex items-center space-x-3">
       <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
        <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8Z" />
       </svg><span>Services</span> </button> <button onclick="scrollToSection('about'); toggleMobileMenu();" class="w-full text-left py-4 px-4 text-slate-300 hover:bg-slate-700 hover:text-white rounded-xl transition-all flex items-center space-x-3">
@@ -1167,8 +1169,11 @@
     </div>
 
     <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-      <p class="font-body text-sm text-gray-400">© 2024 Distinguished Travels and Shuttles. All rights reserved. | Pretoria, Gauteng</p>
-    </div>
+  <p class="font-body text-sm text-gray-400">
+    © 2024 Distinguished Travels and Shuttles. All rights reserved. | Pretoria, Gauteng | Website By <a href="https://www.valoyitech.co.za/" class="hover:text-gold-light transition-colors">ValoyItech</a>
+  </p>
+</div>
+
   </div>
 </footer>
 
