@@ -944,6 +944,71 @@
             background: var(--gold-primary);
             transform: scale(1.2);
         }
+
+        /* Ensure all product cards are equal height and buttons align */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-card .p-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.product-card .p-6 > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.product-card button.btn-luxury-primary {
+  margin-top: auto;
+}
+
+
+/* Footer section headings */
+.footer-section h3 {
+  position: relative;
+  display: inline-block;       /* Makes underline align to the text width */
+  color: var(--gold-primary);
+  margin-bottom: 1rem;
+}
+
+/* Underline style */
+.footer-section h3::after {
+  content: '';
+  display: block;
+  width: 60px;                 /* Adjust width as desired */
+  height: 2px;
+  background-color: var(--gold-primary);
+  margin: 0.5rem auto 0;       /* Center it horizontally */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Optional hover glow */
+.footer-section h3:hover::after {
+  width: 80px;
+  background-color: var(--gold-light);
+}
+
+/* Mobile alignment fix */
+@media (max-width: 768px) {
+  .footer-section h3 {
+    text-align: center;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+}
+
+
         
         /* Let pointer events pass through the shimmer overlay */
 .hero-shop::before {
@@ -1016,7 +1081,7 @@
    <section class="hero-shop hero-slider" style="height: 100vh; min-height: 600px; padding: 0;"><!-- Slide 1 -->
     <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80');">
      <div class="hero-content max-w-7xl mx-auto px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-6xl font-serif font-light mb-8"><span class="text-white">Distinguished</span> <span class="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent"> Holdings</span></h1>
+      <h1 class="text-4xl md:text-6xl font-serif font-light mb-8"><span class="text-white">Distinguished</span> <span class="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent"> Clothing</span></h1>
       <p class="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">Premium clothing and fine wines, crafted for the discerning individual who appreciates excellence.</p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
        <div id="shipping-info" class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-gray-800 px-6 md:px-8 py-3 md:py-4 font-semibold text-base md:text-lg">
@@ -1349,6 +1414,52 @@
                 image: 'images/golf.png',
                 tags: ['golf', 'sport', 'performance', 'polo', 'athletic']
             },
+            {
+  id: 'butterfly-bowtie',
+  name: 'Ready Made Butterfly Bowtie',
+  description: 'Elegant pre-tied bowtie for formal occasions',
+  price: 450,
+  category: 'clothing',
+  image: 'images/450.png',
+  tags: ['bowtie', 'formal', 'accessory', 'ready made']
+},
+{
+  id: 'tux-shirt',
+  name: 'Ready Made Tux Shirt (Free Bowtie)',
+  description: 'Includes a free bowtie. Sizes Small - Extra Large.',
+  price: 700,
+  category: 'clothing',
+  image: 'images/R700.png',
+  tags: ['shirt', 'tux', 'formal', 'ready made']
+},
+{
+  id: 'blue-suit',
+  name: 'Ready Made Blue Suit (Standard Fabric)',
+  description: 'Sizes 30-40. Perfect fit and timeless style.',
+  price: 3500,
+  category: 'clothing',
+  image: 'images/R3500.png',
+  tags: ['suit', 'blue', 'formal', 'ready made']
+},
+{
+  id: 'black-suit',
+  name: 'Ready Made Standard Black Suit',
+  description: 'Sizes 30-40. Classic black elegance.',
+  price: 3500,
+  category: 'clothing',
+  image: 'images/R350.png',
+  tags: ['suit', 'black', 'formal', 'ready made']
+},
+{
+  id: 'tux-set',
+  name: 'Ready Made Tux Suit, Tux-Shirt and Bow Tie',
+  description: 'Complete tuxedo set. Sizes 30-40.',
+  price: 4000,
+  category: 'clothing',
+  image: 'images/R4000.png',
+  tags: ['tux', 'suit', 'bowtie', 'formal', 'set']
+},
+
             // Wines
             {
                 id: 'sweet-red',
@@ -1376,14 +1487,32 @@
                 category: 'wine',
                 image: 'images/3.png',
                 tags: ['premium', 'vintage', 'luxury', 'wine']
-            }
+            },
+            {
+  id: 'vintage-wine-stand',
+  name: 'Vintage Wine Stand',
+  description: 'Stylish wine stand for your collection',
+  price: 550,
+  category: 'wine',
+  image: 'images/R550.png',
+  tags: ['stand', 'wine', 'vintage', 'decor']
+},
+{
+  id: 'vintage-premium-stand',
+  name: 'Vintage Premium Wine Stand',
+  description: 'Premium handcrafted wine stand',
+  price: 700,
+  category: 'wine',
+  image: 'images/R7000.png',
+  tags: ['stand', 'wine', 'premium', 'decor']
+}
         ];
         
         // Filter state
         let currentFilters = {
             search: '',
             category: 'all',
-            maxPrice: 1500,
+            maxPrice: 5000,
             sortBy: 'default'
         };
 
