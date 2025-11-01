@@ -45,12 +45,15 @@
         }
 
         html, body {
-            height: 100%;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #000;
-            color: #c8a15a;
-            scroll-behavior: smooth;
-        }
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  overflow-x: hidden; /* stops side scroll */
+  overflow-y: visible; /* ensures vertical scroll still works */
+}
+
 
         /* Navigation */
         .navbar {
@@ -173,16 +176,13 @@
 
         /* Hero Section with Slider */
         .hero-section {
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-        }
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
 
-        .hero-slider {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
+
+        
 
         .slide {
             position: absolute;
@@ -199,6 +199,14 @@
             align-items: center;
             justify-content: center;
         }
+
+        .hero-slider {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
 
         .slide.active {
             opacity: 1;
@@ -1073,6 +1081,20 @@
 .slide.active {
   pointer-events: auto;
 }
+
+@media (max-width: 768px) {
+  body, html {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .hero-section, .hero-slider, .slide {
+    min-height: 100vh;
+    height: auto;
+  }
+}
+
+
 
     </style>
     
