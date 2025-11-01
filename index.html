@@ -1033,15 +1033,39 @@
             }
         }
 
-        /* Client Logo Carousel */
-        .logo-carousel {
-            animation: scroll 20s linear infinite;
-        }
-        
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
+        /* Continuous responsive scroll showing all logos */
+.logo-carousel {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: max-content;
+  animation: scroll 80s linear infinite;
+}
+
+.logo-carousel img {
+  flex: 0 0 auto;
+  height: 3rem; /* same as h-12 */
+  width: auto;
+  margin-right: 3rem; /* spacing between logos */
+}
+
+/* Keyframes: move entire width of first set */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Ensure smooth scroll on mobile */
+@media (max-width: 768px) {
+  .logo-carousel {
+    animation-duration: 100s; /* slower and smoother on small screens */
+  }
+}
+
 
         .slide {
   pointer-events: none;
@@ -1180,6 +1204,20 @@
         <img src="images/client5.png" alt="Client 5" class="h-12 w-auto">
         <img src="images/client6.png" alt="Client 6" class="h-12 w-auto">
         <img src="images/client7.png" alt="Client 7" class="h-12 w-auto">
+<img src="images/client8.png" alt="Client 8" class="h-12 w-auto">
+<img src="images/client9.png" alt="Client 9" class="h-12 w-auto">
+<img src="images/client10.png" alt="Client 10" class="h-12 w-auto">
+<img src="images/client11.png" alt="Client 11" class="h-12 w-auto">
+<img src="images/client12.png" alt="Client 12" class="h-12 w-auto">
+<img src="images/client13.png" alt="Client 13" class="h-12 w-auto">
+<img src="images/client14.png" alt="Client 14" class="h-12 w-auto">
+<img src="images/client15.png" alt="Client 15" class="h-12 w-auto">
+<img src="images/client16.png" alt="Client 16" class="h-12 w-auto">
+<img src="images/client17.png" alt="Client 17" class="h-12 w-auto">
+<img src="images/client18.png" alt="Client 18" class="h-12 w-auto">
+<img src="images/client19.png" alt="Client 19" class="h-12 w-auto">
+<img src="images/client20.png" alt="Client 20" class="h-12 w-auto">
+
 
         <!-- Duplicate logos for seamless loop -->
         <img src="images/client1.png" alt="Client 1" class="h-12 w-auto">
@@ -1189,6 +1227,20 @@
         <img src="images/client5.png" alt="Client 5" class="h-12 w-auto">
         <img src="images/client6.png" alt="Client 6" class="h-12 w-auto">
         <img src="images/client7.png" alt="Client 7" class="h-12 w-auto">
+<img src="images/client8.png" alt="Client 8" class="h-12 w-auto">
+<img src="images/client9.png" alt="Client 9" class="h-12 w-auto">
+<img src="images/client10.png" alt="Client 10" class="h-12 w-auto">
+<img src="images/client11.png" alt="Client 11" class="h-12 w-auto">
+<img src="images/client12.png" alt="Client 12" class="h-12 w-auto">
+<img src="images/client13.png" alt="Client 13" class="h-12 w-auto">
+<img src="images/client14.png" alt="Client 14" class="h-12 w-auto">
+<img src="images/client15.png" alt="Client 15" class="h-12 w-auto">
+<img src="images/client16.png" alt="Client 16" class="h-12 w-auto">
+<img src="images/client17.png" alt="Client 17" class="h-12 w-auto">
+<img src="images/client18.png" alt="Client 18" class="h-12 w-auto">
+<img src="images/client19.png" alt="Client 19" class="h-12 w-auto">
+<img src="images/client20.png" alt="Client 20" class="h-12 w-auto">
+
       </div>
     </div>
   </div>
